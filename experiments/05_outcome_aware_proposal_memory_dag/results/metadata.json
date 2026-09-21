@@ -1,0 +1,7 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Outcome-Aware Proposal-Memory DAG",
+  "source": "checkpoints/autoresearch-credit-guided-dag-c-30 at source commit f3eeea2",
+  "valid_candidates": 30,
+  "figure_candidates_shown": 30
+}

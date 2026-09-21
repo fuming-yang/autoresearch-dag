@@ -1,0 +1,38 @@
+{
+  "source": "<source-archive>/autoresearch-dag-history-blind-30-d/dag.json",
+  "valid_candidates": 30,
+  "expand": 20,
+  "merge": 10,
+  "baseline_val_bpb": 1.906318,
+  "best_candidate": "exp_000029",
+  "best_val_bpb": 1.869937,
+  "own_baseline_wins": 28,
+  "parent_relative_improvements": 9,
+  "expand_beat_parent": 8,
+  "merge_beat_best_parent": 1,
+  "preparation_failures": 27,
+  "semantic_rejects": 11,
+  "agent_timeouts": 0,
+  "final_T": 40,
+  "mechanism_family_count": 21,
+  "repeated_or_refinement_count": 9,
+  "success_origin_counts": {
+    "inherited_success": 19,
+    "new_mechanism_local_improvement": 6,
+    "independent_discovery": 2,
+    "local_improvement_on_successful_lineage": 1
+  },
+  "figure_topology": {
+    "nodes_total": 32,
+    "valid_candidates": 30,
+    "failed_nodes": [
+      "exp_000018"
+    ],
+    "edges_total": 42,
+    "valid_expand_edges": 20,
+    "valid_merge_edges": 20,
+    "failed_node_edges": 2,
+    "all_merge_nodes_have_two_incoming_edges": true,
+    "edge_sha256": "f3484ad8ce603cd2e6ce5e34676fc9715ba0e254a77e73282c2e131e2ca1996e"
+  }
+}

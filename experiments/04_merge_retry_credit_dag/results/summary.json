@@ -1,0 +1,87 @@
+{
+  "baseline_val_bpb": 1.885642,
+  "valid_finished_candidates": 30,
+  "finished_expand": 18,
+  "finished_merge": 12,
+  "operation_records": 31,
+  "merge_intents": 19,
+  "semantic_rejects": 24,
+  "fallback_expands": 6,
+  "merge_intent_to_finished_merge_rate": 0.631578947368421,
+  "fallback_rate_among_merge_intents": 0.3157894736842105,
+  "rejects_per_merge_intent_mean": 1.263157894736842,
+  "rejects_per_merge_intent_median": 1,
+  "rejects_per_merge_intent_distribution": {
+    "0": 8,
+    "1": 3,
+    "2": 3,
+    "3": 5
+  },
+  "expand_val_bpb": {
+    "mean": 1.9210732777777777,
+    "median": 1.8996225,
+    "best": 1.891442,
+    "worst": 2.071571,
+    "population_std": 0.04895799838274706
+  },
+  "merge_val_bpb": {
+    "mean": 1.9372179166666665,
+    "median": 1.902345,
+    "best": 1.890996,
+    "worst": 2.020632,
+    "population_std": 0.05239905574603796
+  },
+  "merge_success_count": 1,
+  "merge_success_rate": 0.08333333333333333,
+  "successful_merge_ids": [
+    "exp_000025"
+  ],
+  "failed_merge_ids": [
+    "exp_000002",
+    "exp_000005",
+    "exp_000007",
+    "exp_000008",
+    "exp_000009",
+    "exp_000012",
+    "exp_000017",
+    "exp_000020",
+    "exp_000023",
+    "exp_000027",
+    "exp_000028"
+  ],
+  "reject_taxonomy": {
+    "Exact same effective setting": 7,
+    "Baseline + single modification": 2,
+    "Ancestor/descendant same-parameter refinement": 9,
+    "Parallel same-parameter alternatives": 6
+  },
+  "best_candidate": "exp_000007",
+  "best_candidate_val_bpb": 1.890996,
+  "better_than_baseline": 0,
+  "final_T": 42,
+  "parent_uses": {
+    "exp_000000": 8,
+    "exp_000001": 1,
+    "exp_000002": 2,
+    "exp_000006": 3,
+    "exp_000003": 1,
+    "exp_000007": 1,
+    "exp_000010": 3,
+    "exp_000011": 3,
+    "exp_000013": 1,
+    "exp_000012": 1,
+    "exp_000016": 2,
+    "exp_000015": 2,
+    "exp_000017": 2,
+    "exp_000020": 1,
+    "exp_000014": 3,
+    "exp_000018": 1,
+    "exp_000019": 1,
+    "exp_000022": 2,
+    "exp_000024": 1,
+    "exp_000026": 1,
+    "exp_000025": 1,
+    "exp_000028": 1
+  },
+  "expected_edge_count": 42
+}

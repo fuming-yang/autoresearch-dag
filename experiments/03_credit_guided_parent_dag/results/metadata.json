@@ -1,0 +1,7 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Credit-Guided Parent DAG",
+  "source": "checkpoints/autoresearch-credit-guided-dag-a-30 at source commit f35b395",
+  "valid_candidates": 30,
+  "figure_candidates_shown": 30
+}

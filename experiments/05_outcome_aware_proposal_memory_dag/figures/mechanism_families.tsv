@@ -1,0 +1,19 @@
+family	count	share
+cross-component interaction	6	0.2
+optimizer	3	0.1
+optimization	3	0.1
+optimization schedule	2	0.06666666666666667
+attention normalization	2	0.06666666666666667
+output calibration	2	0.06666666666666667
+optimizer-schedule interaction	1	0.03333333333333333
+positional representation	1	0.03333333333333333
+model architecture	1	0.03333333333333333
+attention architecture	1	0.03333333333333333
+loss regularization	1	0.03333333333333333
+activation normalization	1	0.03333333333333333
+training supervision	1	0.03333333333333333
+stochastic regularization	1	0.03333333333333333
+optimization-output-calibration interaction	1	0.03333333333333333
+residual parameterization	1	0.03333333333333333
+value-path calibration	1	0.03333333333333333
+residual-schedule interaction	1	0.03333333333333333

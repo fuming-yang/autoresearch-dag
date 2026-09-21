@@ -1,0 +1,940 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "exp_000000",
+      "status": "finished",
+      "mode": "baseline",
+      "parents": [],
+      "descendants": 32,
+      "best_child_result": 1.879146,
+      "commit": "02ce5cfb22614f7604d56043196d82a732226c95",
+      "hypothesis": "baseline",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T00:00:00+00:00",
+      "started_at": "2026-09-15T00:00:00+00:00",
+      "finished_at": "2026-09-15T00:00:00+00:00",
+      "result": {
+        "val_bpb": 1.885642,
+        "training_seconds": 307.2,
+        "total_seconds": 740.2,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000000.log"
+    },
+    {
+      "id": "exp_000001",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 27,
+      "best_child_result": 1.886228,
+      "commit": "38ed2cc6bcadc313fe2acd66285ec4b84ada51d0",
+      "hypothesis": "Increase full-context attention from two to four of eight layers by changing the sliding-window pattern from SSSL to SSLL, improving long-range token integration and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T19:24:54.109709+00:00",
+      "started_at": "2026-09-14T19:24:54.109718+00:00",
+      "training_started_at": "2026-09-14T19:25:53.947669+00:00",
+      "result": {
+        "val_bpb": 1.879146,
+        "training_seconds": 309.0,
+        "total_seconds": 721.6,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-14T19:37:59.689196+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000001.log"
+    },
+    {
+      "id": "exp_000002",
+      "status": "failed",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "0752a7bc2778668e3a5d19d408695d86d7d8d281",
+      "hypothesis": "experiment preparation failed",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T19:46:32.014655+00:00",
+      "started_at": "2026-09-14T19:46:32.014663+00:00",
+      "error": "Preparing worktree (detached HEAD 02ce5cf)\nfatal: '<source-archive>/.autoresearch-time-40-autoresearch-worktrees/exp_000002' already exists",
+      "finished_at": "2026-09-14T19:46:32.017173+00:00"
+    },
+    {
+      "id": "exp_000003",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 21,
+      "best_child_result": 1.889732,
+      "commit": "80791d496b9c60a7de5c13e29d9944e9044c810a",
+      "hypothesis": "Increase full-context attention from four to six of eight layers by changing the sliding-window pattern from SSLL to SLLL, further improving long-range token integration and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T19:49:35.784675+00:00",
+      "started_at": "2026-09-14T19:49:35.784682+00:00",
+      "training_started_at": "2026-09-14T19:50:09.616536+00:00",
+      "result": {
+        "val_bpb": 1.888628,
+        "training_seconds": 308.7,
+        "total_seconds": 738.8,
+        "peak_vram_mb": 12131.5,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T20:02:32.493317+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000003.log"
+    },
+    {
+      "id": "exp_000004",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000003"
+      ],
+      "descendants": 20,
+      "best_child_result": 1.890555,
+      "commit": "4f31b0eefa0dd821f8fb83536f15f6d56b343c13",
+      "hypothesis": "Use full-context attention in all eight layers by changing the window pattern from SLLL to LLLL, improving long-range token integration and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T20:02:32.499196+00:00",
+      "started_at": "2026-09-14T20:02:32.499203+00:00",
+      "training_started_at": "2026-09-14T20:03:18.149557+00:00",
+      "result": {
+        "val_bpb": 1.889732,
+        "training_seconds": 313.0,
+        "total_seconds": 746.9,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T20:15:47.423511+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000004.log"
+    },
+    {
+      "id": "exp_000005",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 5,
+      "best_child_result": 2.003266,
+      "commit": "5c4ee76af77a2025df9a41e0d0d74bc32538b251",
+      "hypothesis": "Add a 5% linear learning-rate warmup to reduce destabilizing early updates and lower validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T20:15:47.428473+00:00",
+      "started_at": "2026-09-14T20:15:47.428497+00:00",
+      "training_started_at": "2026-09-14T20:16:23.905254+00:00",
+      "result": {
+        "val_bpb": 2.005382,
+        "training_seconds": 311.5,
+        "total_seconds": 737.3,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T20:28:43.609889+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000005.log"
+    },
+    {
+      "id": "exp_000006",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 9,
+      "best_child_result": 1.885344,
+      "commit": "9756e618a144742dae81f006d8ef1a5da6ee756a",
+      "hypothesis": "Alternate half- and full-context attention layers with SLSL instead of clustering full-context layers in SSLL, preserving attention compute while integrating long-range information more regularly and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T20:29:50.896353+00:00",
+      "started_at": "2026-09-14T20:29:50.896365+00:00",
+      "training_started_at": "2026-09-14T20:30:26.457808+00:00",
+      "result": {
+        "val_bpb": 1.886228,
+        "training_seconds": 324.2,
+        "total_seconds": 744.0,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-14T20:42:52.830624+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000006.log"
+    },
+    {
+      "id": "exp_000007",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 15,
+      "best_child_result": 1.88697,
+      "commit": "69abaea4657c65cde63a0bdc1e26a5a0f1e9e17b",
+      "hypothesis": "Increase the RoPE base from 10,000 to 50,000 so all eight full-context attention layers retain finer long-range positional resolution, lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T20:43:22.938988+00:00",
+      "started_at": "2026-09-14T20:43:22.938995+00:00",
+      "training_started_at": "2026-09-14T20:44:02.033068+00:00",
+      "result": {
+        "val_bpb": 1.891008,
+        "training_seconds": 312.4,
+        "total_seconds": 747.8,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T20:56:32.273517+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000007.log"
+    },
+    {
+      "id": "exp_000008",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 5,
+      "best_child_result": 1.886365,
+      "commit": "c3ff16c9a022186c2c096efd96af173ef40f7c13",
+      "hypothesis": "Use two full-context attention layers per four-layer cycle (SSLL instead of SSSL) to improve long-range token prediction and lower val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T20:56:32.414152+00:00",
+      "started_at": "2026-09-14T20:56:32.414161+00:00",
+      "training_started_at": "2026-09-14T20:57:21.699141+00:00",
+      "result": {
+        "val_bpb": 1.886335,
+        "training_seconds": 309.2,
+        "total_seconds": 738.6,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T21:09:42.663510+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000008.log"
+    },
+    {
+      "id": "exp_000009",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 4,
+      "best_child_result": 1.885868,
+      "commit": "66de8eadba838707a8314e9c03075d40e6f7cc4f",
+      "hypothesis": "Increase the RoPE base from 10,000 to 20,000 so positional phases vary more slowly, improving integration of distant tokens now that all eight layers use full-context attention and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T21:14:31.468483+00:00",
+      "started_at": "2026-09-14T21:14:31.468490+00:00",
+      "training_started_at": "2026-09-14T21:15:16.886052+00:00",
+      "result": {
+        "val_bpb": 1.890555,
+        "training_seconds": 314.4,
+        "total_seconds": 753.1,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T21:27:52.319747+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000009.log"
+    },
+    {
+      "id": "exp_000010",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000006"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.90685,
+      "commit": "d028ab58a612f1eb9e5c4d37d5e7d2ec1e6647a3",
+      "hypothesis": "Move the four full-context attention layers to the upper half of the network with SSSSLLLL, preserving attention compute while letting lower local layers build features before upper layers integrate global context, lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T21:28:25.014448+00:00",
+      "started_at": "2026-09-14T21:28:25.014455+00:00",
+      "training_started_at": "2026-09-14T21:29:48.159082+00:00",
+      "result": {
+        "val_bpb": 1.885553,
+        "training_seconds": 305.7,
+        "total_seconds": 731.0,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T21:42:01.539038+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000010.log"
+    },
+    {
+      "id": "exp_000011",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000007"
+      ],
+      "descendants": 4,
+      "best_child_result": 1.888277,
+      "commit": "e92f8de861e2e8043f92cfa09e5ced5e7e1b2d24",
+      "hypothesis": "Increase the RoPE base from 50,000 to 100,000 so full-context attention preserves finer long-range positional resolution and lowers val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T21:42:01.544764+00:00",
+      "started_at": "2026-09-14T21:42:01.544770+00:00",
+      "training_started_at": "2026-09-14T21:42:35.610864+00:00",
+      "result": {
+        "val_bpb": 1.891843,
+        "training_seconds": 311.0,
+        "total_seconds": 745.4,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T21:55:03.409366+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000011.log"
+    },
+    {
+      "id": "exp_000012",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000006"
+      ],
+      "descendants": 4,
+      "best_child_result": 1.885868,
+      "commit": "fa34f29ca915b81e099f3aa79363a3718bf9b7b6",
+      "hypothesis": "Use an LSSL attention schedule instead of SLSL, preserving four half- and four full-context layers while placing full-context attention at each four-layer stage boundary so global information is established before local refinement and refreshed between stages, lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T21:55:03.513505+00:00",
+      "started_at": "2026-09-14T21:55:03.513512+00:00",
+      "training_started_at": "2026-09-14T21:56:10.092397+00:00",
+      "result": {
+        "val_bpb": 1.885344,
+        "training_seconds": 304.0,
+        "total_seconds": 729.4,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T22:08:21.809219+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000012.log"
+    },
+    {
+      "id": "exp_000013",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 1,
+      "best_child_result": null,
+      "commit": "fcde3592bbd7b84074044e0a5fbb08109624d094",
+      "hypothesis": "Increase full-context attention from four to six of eight layers by changing the sliding-window pattern from SSLL to SLLL, strengthening long-range token integration while retaining two local-attention layers and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T22:08:21.815075+00:00",
+      "started_at": "2026-09-14T22:08:21.815084+00:00",
+      "training_started_at": "2026-09-14T22:08:59.422837+00:00",
+      "result": {
+        "val_bpb": 1.889874,
+        "training_seconds": 313.6,
+        "total_seconds": 743.2,
+        "peak_vram_mb": 12131.5,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T22:21:24.797673+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000013.log"
+    },
+    {
+      "id": "exp_000014",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000007"
+      ],
+      "descendants": 5,
+      "best_child_result": 1.889794,
+      "commit": "98e140539ab92097dcb6986c2c2b3ef3b9db446f",
+      "hypothesis": "Increase the RoPE base from 50,000 to 100,000 so the eight full-context attention layers preserve finer positional resolution across long token distances, lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T22:21:24.927119+00:00",
+      "started_at": "2026-09-14T22:21:24.927128+00:00",
+      "training_started_at": "2026-09-14T22:21:59.471352+00:00",
+      "result": {
+        "val_bpb": 1.892304,
+        "training_seconds": 313.0,
+        "total_seconds": 747.1,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T22:34:28.902103+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000014.log"
+    },
+    {
+      "id": "exp_000015",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000001",
+        "exp_000007"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.90685,
+      "commit": "b3d384eb045223e3c7534ef47b1fc42d3ebce642",
+      "hypothesis": "Combine the distinct, compatible improvements by retaining the SSLL sliding-window pattern for four full-context layers and increasing the RoPE base from 10,000 to 50,000 for finer long-range positional resolution.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T22:34:29.001890+00:00",
+      "started_at": "2026-09-14T22:34:29.001898+00:00",
+      "training_started_at": "2026-09-14T22:35:03.021124+00:00",
+      "result": {
+        "val_bpb": 1.889254,
+        "training_seconds": 310.8,
+        "total_seconds": 738.0,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T22:47:23.215110+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000015.log"
+    },
+    {
+      "id": "exp_000016",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000008"
+      ],
+      "descendants": 2,
+      "best_child_result": 1.888277,
+      "commit": "7d41e8e43911eaafbe49ee0776efd0f2c7414016",
+      "hypothesis": "Alternate short- and full-context attention layers (SLSL instead of SSLL) so global information is integrated earlier and more evenly without increasing attention compute, lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T22:47:23.222488+00:00",
+      "started_at": "2026-09-14T22:47:23.222497+00:00",
+      "training_started_at": "2026-09-14T22:47:57.210762+00:00",
+      "result": {
+        "val_bpb": 1.886365,
+        "training_seconds": 300.0,
+        "total_seconds": 716.2,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T22:59:55.646893+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000016.log"
+    },
+    {
+      "id": "exp_000017",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000009",
+        "exp_000012"
+      ],
+      "descendants": 2,
+      "best_child_result": 2.001804,
+      "commit": "e8471bbe511e33bfaee467e93697ce4a9eceb0d7",
+      "hypothesis": "Combine the distinct and compatible improvements: retain the LSSL attention schedule, which preserves four local and four full-context layers with full attention at stage boundaries, and increase the RoPE base to 20,000 so positional phases vary more slowly across those full-context interactions, with the expectation that their complementary effects further lower val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T22:59:55.654029+00:00",
+      "started_at": "2026-09-14T22:59:55.654041+00:00",
+      "training_started_at": "2026-09-14T23:00:36.997691+00:00",
+      "result": {
+        "val_bpb": 1.885868,
+        "training_seconds": 303.8,
+        "total_seconds": 729.4,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T23:12:48.640078+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000017.log"
+    },
+    {
+      "id": "exp_000018",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000001",
+        "exp_000005"
+      ],
+      "descendants": 3,
+      "best_child_result": 2.001804,
+      "commit": "74555c03bd5a8500465ef4c92f3af4ef31de9d10",
+      "hypothesis": "Combine the distinct, compatible improvements: retain the SSLL attention pattern for four full-context layers and add a 5% linear learning-rate warmup to stabilize early optimization.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T23:12:48.645189+00:00",
+      "started_at": "2026-09-14T23:12:48.645195+00:00",
+      "training_started_at": "2026-09-14T23:13:28.724416+00:00",
+      "result": {
+        "val_bpb": 2.003266,
+        "training_seconds": 307.7,
+        "total_seconds": 733.8,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T23:25:44.652549+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000018.log"
+    },
+    {
+      "id": "exp_000019",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000005",
+        "exp_000014"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "d87b9e872759f0381650e6dced8a4e742ee10957",
+      "hypothesis": "Combine a 5% linear learning-rate warmup with a RoPE base of 100,000 and eight full-context attention layers; the schedule and positional-attention changes are distinct and compatible, and may jointly lower validation BPB by stabilizing early updates while preserving finer long-distance positional resolution.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T23:25:44.658595+00:00",
+      "started_at": "2026-09-14T23:25:44.658603+00:00",
+      "training_started_at": "2026-09-14T23:26:21.353875+00:00",
+      "result": {
+        "val_bpb": 2.005477,
+        "training_seconds": 312.2,
+        "total_seconds": 742.8,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T23:38:46.442073+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000019.log"
+    },
+    {
+      "id": "exp_000020",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000014"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.999576,
+      "commit": "afbb9fba2a58f27783a203ca7f7eb76f5f0ffa3d",
+      "hypothesis": "Increase the output logit soft cap from 15 to 30 so confident token predictions are less compressed while logits remain bounded, lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T23:38:46.448171+00:00",
+      "started_at": "2026-09-14T23:38:46.448178+00:00",
+      "training_started_at": "2026-09-14T23:39:34.527255+00:00",
+      "result": {
+        "val_bpb": 1.893809,
+        "training_seconds": 309.4,
+        "total_seconds": 741.7,
+        "peak_vram_mb": 12133.2,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-14T23:51:58.451669+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000020.log"
+    },
+    {
+      "id": "exp_000021",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000017",
+        "exp_000018"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.999576,
+      "commit": "200b65b009a99469eba12a4575b295ecde9c6c04",
+      "hypothesis": "Retain the better parent\u2019s LSSL attention schedule and RoPE base of 20,000, and add the distinct, compatible 5% linear learning-rate warmup from the SSLL experiment; do not adopt SSLL because it conflicts with LSSL.",
+      "worker_slot": 0,
+      "created_at": "2026-09-14T23:51:58.601347+00:00",
+      "started_at": "2026-09-14T23:51:58.601413+00:00",
+      "training_started_at": "2026-09-14T23:52:46.271563+00:00",
+      "result": {
+        "val_bpb": 2.001804,
+        "training_seconds": 305.7,
+        "total_seconds": 728.5,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T00:04:56.944231+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000021.log"
+    },
+    {
+      "id": "exp_000022",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000011",
+        "exp_000018"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "872f11099c7b40f510613bca766a10f069a36eff",
+      "hypothesis": "Combine distinct, compatible changes: retain a RoPE base of 100000, use SSLL attention for four full-context layers at depth 8, and apply 5% linear learning-rate warmup under the existing training-time progress schedule. Positional frequency scaling, attention coverage, and early optimization address different mechanisms and may jointly lower val_bpb; the combined gain remains untested.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T00:11:40.988514+00:00",
+      "started_at": "2026-09-15T00:11:40.988522+00:00",
+      "training_started_at": "2026-09-15T00:12:45.383317+00:00",
+      "result": {
+        "val_bpb": 2.002156,
+        "training_seconds": 306.5,
+        "total_seconds": 729.9,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T00:24:57.508528+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000022.log"
+    },
+    {
+      "id": "exp_000023",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000011",
+        "exp_000016"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.888351,
+      "commit": "db1fcb1f96f3b346255d958a9c6d58e203ea104a",
+      "hypothesis": "Combine A's RoPE base of 100000 with B's SLSL attention pattern. Positional frequencies and attention-layer placement are distinct and compatible: slower low-frequency rotations may support long-range attention while alternating short and full windows integrates global information earlier and evenly. The eight-layer SLSL schedule retains four short and four full layers, so changing the RoPE base adds no attention compute relative to B. Actual snapshots use A=100000/LLLL and B=10000/SLSL, rather than the stated baselines of 50000 and SSLL. The combination is worth testing for lower val_bpb; improvement is unverified.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T00:33:29.247521+00:00",
+      "started_at": "2026-09-15T00:33:29.247529+00:00",
+      "training_started_at": "2026-09-15T00:34:25.700543+00:00",
+      "result": {
+        "val_bpb": 1.888277,
+        "training_seconds": 321.0,
+        "total_seconds": 738.7,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-15T00:46:46.717328+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000023.log"
+    },
+    {
+      "id": "exp_000025",
+      "status": "failed",
+      "mode": "merge",
+      "parents": [
+        "exp_000009",
+        "exp_000013"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "8d9ef9adae128f7d1ce249b65ff241f413a5c2a5",
+      "hypothesis": "experiment preparation failed",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T00:50:16.178424+00:00",
+      "started_at": "2026-09-15T00:50:16.178430+00:00",
+      "error": "research agent failed; see <source-archive>/autoresearch-time-40/results/exp_000025.agent.log",
+      "finished_at": "2026-09-15T00:50:18.179925+00:00"
+    },
+    {
+      "id": "exp_000026",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000010",
+        "exp_000015"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "bd7aa8191fff4f4a70eb68c9fa6cd2b1df7b1408",
+      "hypothesis": "Combine A's SSSSLLLL layout with B's RoPE base of 50000. At depth eight, four lower local layers precede four upper full-context layers, preserving attention compute. RoPE frequency scaling is distinct from attention placement and does not depend on B's SSLL ordering, making the changes compatible and worth testing together for lower val_bpb. Improvement remains unverified without training.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T10:12:44.085382+00:00",
+      "started_at": "2026-09-15T10:12:44.085391+00:00",
+      "training_started_at": "2026-09-15T10:13:45.077938+00:00",
+      "result": {
+        "val_bpb": 1.90685,
+        "training_seconds": 309.2,
+        "total_seconds": 831.7,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-15T10:27:40.848081+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000026.log"
+    },
+    {
+      "id": "exp_000027",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000008",
+        "exp_000011"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "5847dbc9445204e4ea38fc4c80b4ca2594e6548f",
+      "hypothesis": "Combine SSLL attention cycles with RoPE base 100000: attention coverage and positional frequencies are distinct, compatible mechanisms that may jointly improve long-range prediction and lower val_bpb. Retain A's SSLL pattern and apply B's rotary base, without adopting B's LLLL pattern. Inspection shows A actually uses base 10000, rather than the stated 50000. Combined performance remains untested.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T10:28:34.680070+00:00",
+      "started_at": "2026-09-15T10:28:34.680078+00:00",
+      "training_started_at": "2026-09-15T10:29:15.552723+00:00",
+      "result": {
+        "val_bpb": 1.889833,
+        "training_seconds": 308.2,
+        "total_seconds": 735.5,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T10:41:33.612442+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000027.log"
+    },
+    {
+      "id": "exp_000028",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000020",
+        "exp_000021"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "5b1989713024b85d32fdbe37fa62fcf0d91735bc",
+      "hypothesis": "Combine A's output logit soft cap of 30 with B's LSSL attention pattern, RoPE base of 20000, and 5% linear learning-rate warmup using the existing time-based progress schedule. These distinct, compatible changes affect output compression, context modeling, and optimization respectively and may jointly lower val_bpb. Do not adopt SSLL; the combined benefit remains to be measured.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T10:46:06.043257+00:00",
+      "started_at": "2026-09-15T10:46:06.043264+00:00",
+      "training_started_at": "2026-09-15T10:46:54.236776+00:00",
+      "result": {
+        "val_bpb": 1.999576,
+        "training_seconds": 302.1,
+        "total_seconds": 723.6,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T10:59:00.177513+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000028.log"
+    },
+    {
+      "id": "exp_000029",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000007",
+        "exp_000008"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "433070835705c4e34889642e3a51e9386bad7d7a",
+      "hypothesis": "Combine A's RoPE base of 50,000 with B's SSLL attention pattern. Positional frequencies and attention-window allocation are distinct, compatible mechanisms that may jointly lower val_bpb. Retain B's four full-context layers across eight layers, rather than A's all-full-context layout, and apply the larger RoPE base to every layer. The combined benefit remains untested.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T10:59:54.246386+00:00",
+      "started_at": "2026-09-15T10:59:54.246394+00:00",
+      "training_started_at": "2026-09-15T11:00:49.935652+00:00",
+      "result": {
+        "val_bpb": 1.887061,
+        "training_seconds": 300.5,
+        "total_seconds": 718.8,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T11:12:50.956381+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000029.log"
+    },
+    {
+      "id": "exp_000030",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000007",
+        "exp_000023"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "0e01ec705235d2b2f3f79793b1c9fda6106d8487",
+      "hypothesis": "The inspected snapshots are A=50000/LLLL and B=100000/SLSL, contrary to the snapshot values claimed in the supplied B hypothesis. Combine A's RoPE base of 50000 with B's SLSL attention schedule. Positional frequencies and attention-layer placement are distinct, compatible controls: this tests whether the 50000 positional scale improves val_bpb with four half-context and four full-context layers alternating across eight layers. Attention compute is unchanged relative to B. Improvement is unverified; no full training was run.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T11:20:54.075891+00:00",
+      "started_at": "2026-09-15T11:20:54.075899+00:00",
+      "training_started_at": "2026-09-15T11:21:43.260630+00:00",
+      "result": {
+        "val_bpb": 1.888351,
+        "training_seconds": 300.4,
+        "total_seconds": 720.8,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T11:33:46.396954+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000030.log"
+    },
+    {
+      "id": "exp_000031",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000006",
+        "exp_000014"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.906846,
+      "commit": "f5852eef51caa8cb4828f52ee79f376ad9241cc4",
+      "hypothesis": "Combine A's alternating SLSL half/full-context schedule with B's RoPE base of 100000. These are distinct, compatible controls: the schedule distributes long-range attention regularly while the larger RoPE base changes positional frequencies across all layers. Preserve A's attention compute and four full-context layers among eight total; B's all-full LLLL schedule is not required for its RoPE change. The inspected A actually uses base 10000, not 50000. The combination may lower val_bpb, but its joint benefit is untested.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T11:34:37.192462+00:00",
+      "started_at": "2026-09-15T11:34:37.192470+00:00",
+      "training_started_at": "2026-09-15T11:35:30.536281+00:00",
+      "result": {
+        "val_bpb": 1.889794,
+        "training_seconds": 302.3,
+        "total_seconds": 725.9,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T11:47:38.705566+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000031.log"
+    },
+    {
+      "id": "exp_000032",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000007",
+        "exp_000012"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "47fdae4a9c50e9282f687ff386be7123fc78f213",
+      "hypothesis": "Combine RoPE base 50000 with LSSL attention. Positional frequencies and attention-window placement are distinct, compatible mechanisms worth testing together: the larger base may improve long-range positional encoding while LSSLLSSL establishes and refreshes global information around local refinement. Retain B's four full-context and four half-context layers rather than A's eight full-context layers, applying the larger RoPE base to all layers. The combined effect on val_bpb is untested.",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T11:47:38.712748+00:00",
+      "started_at": "2026-09-15T11:47:38.712757+00:00",
+      "training_started_at": "2026-09-15T11:48:31.882856+00:00",
+      "result": {
+        "val_bpb": 1.88697,
+        "training_seconds": 300.9,
+        "total_seconds": 720.2,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-15T12:00:34.436052+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000032.log"
+    },
+    {
+      "id": "exp_000033",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000000",
+        "exp_000031"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "bf193e30f866986a3eb319be2bdf1abd160131a4",
+      "hypothesis": "Combine alternating SLSL half/full-context attention across eight layers (four full-context layers) with RoPE base 100000. The attention schedule and positional frequencies are distinct, compatible controls worth evaluating together; their joint val_bpb benefit is untested. Inspection corrects the supplied provenance: A actually uses SSSL and base 10000, while B already contains SLSL and base 100000. The synthesis therefore matches B and preserves the requested four-full-layer schedule, but does not preserve actual A attention compute (A has two full-context layers).",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T21:46:28.925374+00:00",
+      "started_at": "2026-09-15T21:46:28.925383+00:00",
+      "training_started_at": "2026-09-15T21:47:14.100518+00:00",
+      "result": {
+        "val_bpb": 1.906846,
+        "training_seconds": 300.3,
+        "total_seconds": 812.9,
+        "peak_vram_mb": 12129.7,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-15T22:00:51.215179+00:00",
+      "log": "<source-archive>/autoresearch-time-40/results/exp_000033.log"
+    }
+  ],
+  "rejected_merges": [
+    [
+      "exp_000000",
+      "exp_000001"
+    ],
+    [
+      "exp_000001",
+      "exp_000004"
+    ],
+    [
+      "exp_000000",
+      "exp_000005"
+    ],
+    [
+      "exp_000001",
+      "exp_000003"
+    ],
+    [
+      "exp_000000",
+      "exp_000004"
+    ],
+    [
+      "exp_000000",
+      "exp_000003"
+    ],
+    [
+      "exp_000003",
+      "exp_000008"
+    ],
+    [
+      "exp_000003",
+      "exp_000004"
+    ],
+    [
+      "exp_000000",
+      "exp_000014"
+    ],
+    [
+      "exp_000017",
+      "exp_000021"
+    ],
+    [
+      "exp_000019",
+      "exp_000021"
+    ],
+    [
+      "exp_000008",
+      "exp_000018"
+    ],
+    [
+      "exp_000006",
+      "exp_000010"
+    ],
+    [
+      "exp_000000",
+      "exp_000016"
+    ],
+    [
+      "exp_000009",
+      "exp_000011"
+    ],
+    [
+      "exp_000001",
+      "exp_000021"
+    ],
+    [
+      "exp_000008",
+      "exp_000016"
+    ],
+    [
+      "exp_000004",
+      "exp_000007"
+    ],
+    [
+      "exp_000026",
+      "exp_000030"
+    ],
+    [
+      "exp_000011",
+      "exp_000022"
+    ]
+  ]
+}

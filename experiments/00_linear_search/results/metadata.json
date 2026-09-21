@@ -1,0 +1,8 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Linear Search",
+  "source": "autoresearch-linear-40 at source commit c0a54c2",
+  "valid_iterations": 40,
+  "standardized_view_iterations": 30,
+  "figure_annotation": "30 shown / 40 total"
+}

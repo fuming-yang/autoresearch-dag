@@ -1,0 +1,7 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Merge-Retry Credit-Guided DAG",
+  "source": "checkpoints/autoresearch-credit-guided-dag-b-30 at source commit 3997c07",
+  "valid_candidates": 30,
+  "figure_candidates_shown": 30
+}

@@ -1,0 +1,31 @@
+candidate_id	operation	parents	proposal_description	actual_code_change	modified_parameter_or_mechanism	original_family	canonical_mechanism_family	duplication_class	beat_baseline
+exp_000001	expand	exp_000000	5% linear LR warmup	WARMUP_RATIO 0.0 -> 0.05	learning-rate warmup	optimization schedule	LR warmup	distinct-first	false
+exp_000002	expand	exp_000000	slower Adam variance memory	ADAM_BETAS beta2 0.95 -> 0.99	optimizer second-moment timescale	optimizer	optimizer second-moment timescale	distinct-first	true
+exp_000004	merge	exp_000002,exp_000001	combine Adam beta2 with warmup	add WARMUP_RATIO 0.05 to beta2=0.99 parent	learning-rate warmup	optimizer-schedule interaction	LR warmup	exact-duplicate	false
+exp_000005	expand	exp_000000	raise RoPE frequency base	rotary base default 10000 -> 100000	RoPE frequency base	positional representation	RoPE frequency base	distinct-first	false
+exp_000006	expand	exp_000000	smoother squared MLP activation	F.relu(x).square -> F.gelu(x).square	MLP activation	model architecture	MLP activation	distinct-first	false
+exp_000007	merge	exp_000006,exp_000005	combine squared GELU with RoPE base	add squared GELU to RoPE parent	MLP activation	cross-component interaction	MLP activation	exact-duplicate	false
+exp_000008	expand	exp_000007	interleave local/global attention	WINDOW_PATTERN SSSL -> SLSL	attention window topology	attention architecture	attention window topology	distinct-first	true
+exp_000009	expand	exp_000005	sharpen normalized attention logits	SDPA scale default -> 1.5/sqrt(head_dim)	attention-logit temperature	attention normalization	attention-logit temperature	distinct-first	true
+exp_000010	merge	exp_000008,exp_000009	combine interleaved windows with sharper logits	add WINDOW_PATTERN SLSL to scaled-attention parent	attention window topology	cross-component interaction	attention window topology	exact-duplicate	true
+exp_000011	expand	exp_000009	tighten vocabulary-logit softcap	softcap 15 -> 12	output-logit softcap	output calibration	output-logit softcap	distinct-first	true
+exp_000012	expand	exp_000005	label smoothing	cross_entropy label_smoothing 0 -> 0.01	label smoothing	loss regularization	label smoothing	distinct-first	false
+exp_000013	merge	exp_000007,exp_000010	add smooth activation to attention stack	F.relu(x).square -> F.gelu(x).square	MLP activation	cross-component interaction	MLP activation	exact-duplicate	true
+exp_000014	expand	exp_000009	center Q/K features before RMS norm	subtract per-token Q and K head-dimension means	QK feature centering	attention normalization	QK feature centering	distinct-first	true
+exp_000015	expand	exp_000010	global accumulated-gradient clipping	add clip_grad_norm_ threshold 1.0	gradient clipping	optimization	gradient clipping	distinct-first	true
+exp_000016	expand	exp_000010	center residual stream before RMS norm	add stream_norm mean subtraction	residual-stream centering	activation normalization	residual-stream centering	distinct-first	false
+exp_000017	expand	exp_000015	adaptive per-tensor clipping	replace global clip with gradient/weight norm ratio 0.01	gradient clipping	optimization	gradient clipping	near-duplicate/refinement	true
+exp_000018	expand	exp_000012	mid-layer auxiliary next-token loss	add 5% midpoint loss via shared lm_head	deep supervision	training supervision	deep supervision	distinct-first	false
+exp_000019	expand	exp_000015	centralize Muon matrix gradients	subtract each Muon gradient row mean before global clip	Muon gradient centralization	optimizer	Muon gradient centralization	distinct-first	true
+exp_000020	merge	exp_000013,exp_000017	combine representation stack with adaptive clipping	F.relu(x).square -> F.gelu(x).square	MLP activation	cross-component interaction	MLP activation	exact-duplicate	true
+exp_000021	expand	exp_000020	cosine warmdown	linear cooldown multiplier -> cosine cooldown	LR decay shape	optimization schedule	cosine LR warmdown	distinct-first	true
+exp_000022	merge	exp_000020,exp_000019	centralization before adaptive clipping	add Muon row-mean gradient subtraction	Muon gradient centralization	cross-component interaction	Muon gradient centralization	exact-duplicate	true
+exp_000023	expand	exp_000021	layerwise stochastic depth	add depth-scaled block drop-path up to 10%	stochastic depth	stochastic regularization	stochastic depth	distinct-first	true
+exp_000024	merge	exp_000017,exp_000011	adaptive clipping plus tighter softcap	softcap 15 -> 12	output-logit softcap	optimization-output-calibration interaction	output-logit softcap	exact-duplicate	true
+exp_000025	expand	exp_000022	slower NorMuon variance tracking	NorMuon beta2 0.95 -> 0.98	optimizer second-moment timescale	optimizer	optimizer second-moment timescale	near-duplicate/refinement	true
+exp_000026	merge	exp_000022,exp_000017	centralization before adaptive clipping	add Muon row-mean gradient subtraction	Muon gradient centralization	optimization	Muon gradient centralization	exact-duplicate	true
+exp_000027	expand	exp_000023	balance residual branch magnitudes	multiply attention and MLP residual branches by 1/sqrt(2)	residual branch scaling	residual parameterization	residual branch scaling	distinct-first	true
+exp_000028	merge	exp_000023,exp_000019	stochastic depth with centralized Muon gradients	add centralization and replace adaptive clip with global clip	Muon gradient centralization plus clipping variant	cross-component interaction	Muon gradient centralization	near-duplicate/refinement	true
+exp_000029	expand	exp_000027	bound value-embedding gate	2*sigmoid(gate) -> sigmoid(gate)	value-embedding gate scale	value-path calibration	value-embedding gate scaling	distinct-first	true
+exp_000030	merge	exp_000027,exp_000021	anneal stochastic depth during cosine cooldown	add drop-path multiplier 1 -> 0 over warmdown	stochastic-depth schedule	residual-schedule interaction	stochastic depth	near-duplicate/refinement	true
+exp_000031	expand	exp_000011	center vocabulary logits before softcap	subtract per-token vocabulary-logit mean	output-logit centering	output calibration	output-logit centering	distinct-first	true

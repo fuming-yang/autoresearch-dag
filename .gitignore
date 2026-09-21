@@ -1,0 +1,60 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Runtime and temporary artifacts
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+worktrees/
+*-worktrees/
+
+# Model artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Build and report artifacts
+build/
+dist/
+*.egg-info/
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.fdb_latexmk
+report/*.fls
+report/*.log
+report/*.out
+report/*.pdf
+report/*.synctex.gz

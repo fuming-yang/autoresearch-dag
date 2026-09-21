@@ -1,0 +1,7 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Uniform Random DAG Search",
+  "source": "checkpoints/autoresearch-time-30-final at source commit d2bd9fa",
+  "valid_candidates": 30,
+  "figure_candidates_shown": 30
+}

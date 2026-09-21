@@ -1,0 +1,809 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "exp_000000",
+      "status": "finished",
+      "mode": "baseline",
+      "parents": [],
+      "descendants": 30,
+      "best_child_result": 2.003181,
+      "commit": "66473fe7f8a60643b3baf4467e58918deb5d2b6a",
+      "hypothesis": "baseline",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T00:00:00+00:00",
+      "started_at": "2026-09-15T00:00:00+00:00",
+      "finished_at": "2026-09-15T00:00:00+00:00",
+      "result": {
+        "val_bpb": 1.885642,
+        "training_seconds": 307.2,
+        "total_seconds": 740.2,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000000.log"
+    },
+    {
+      "id": "exp_000001",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 20,
+      "best_child_result": 2.002502,
+      "commit": "9a2d6ce5bcea2a9c56cab20a563f9f87649be323",
+      "hypothesis": "A 5% time-based learning-rate warmup will stabilize the high initial embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T20:34:56.430240+00:00",
+      "started_at": "2026-09-16T20:34:56.430247+00:00",
+      "training_started_at": "2026-09-16T20:35:34.027675+00:00",
+      "result": {
+        "val_bpb": 2.083135,
+        "training_seconds": 315.7,
+        "total_seconds": 856.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-16T20:49:56.074873+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000001.log"
+    },
+    {
+      "id": "exp_000002",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 4,
+      "best_child_result": 2.007076,
+      "commit": "ebb55f9cc09a0ead0a6ec7cebca8ec2bcfce2a10",
+      "hypothesis": "Extending the time-based learning-rate warmup from 5% to 10% will further stabilize the large initial embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T20:49:56.248964+00:00",
+      "started_at": "2026-09-16T20:49:56.248979+00:00",
+      "training_started_at": "2026-09-16T20:50:32.699859+00:00",
+      "result": {
+        "val_bpb": 2.00414,
+        "training_seconds": 306.5,
+        "total_seconds": 729.9,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T21:02:46.385063+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000002.log"
+    },
+    {
+      "id": "exp_000003",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 6,
+      "best_child_result": 2.012509,
+      "commit": "82bebc0acb74a742e225e809eb8b0a8cc09b18bd",
+      "hypothesis": "Extending the existing time-based learning-rate warmup from 5% to 10% of the 300-second budget will further stabilize the initially large embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T21:02:46.491726+00:00",
+      "started_at": "2026-09-16T21:02:46.491736+00:00",
+      "training_started_at": "2026-09-16T21:03:39.113022+00:00",
+      "result": {
+        "val_bpb": 2.002502,
+        "training_seconds": 302.6,
+        "total_seconds": 722.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T21:15:43.672883+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000003.log"
+    },
+    {
+      "id": "exp_000004",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 6,
+      "best_child_result": 2.00463,
+      "commit": "ca44d9310631584138b2c979e601251897910cff",
+      "hypothesis": "Extending the time-based learning-rate warmup from 5% to 10% will further stabilize the high initial embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T21:15:43.782722+00:00",
+      "started_at": "2026-09-16T21:15:43.782735+00:00",
+      "training_started_at": "2026-09-16T21:16:18.024116+00:00",
+      "result": {
+        "val_bpb": 2.077139,
+        "training_seconds": 306.9,
+        "total_seconds": 822.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-16T21:30:03.110175+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000004.log"
+    },
+    {
+      "id": "exp_000005",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 8,
+      "best_child_result": 2.00294,
+      "commit": "5e607ca4b43295a600cffc2ae0c0744e0dd07122",
+      "hypothesis": "A 5% time-based learning-rate warmup will reduce early optimization transients from the high initial Muon/embedding learning rates, improving the model's later validation bits per byte and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T21:30:03.202431+00:00",
+      "started_at": "2026-09-16T21:30:03.202440+00:00",
+      "training_started_at": "2026-09-16T21:30:43.472775+00:00",
+      "result": {
+        "val_bpb": 2.003181,
+        "training_seconds": 307.1,
+        "total_seconds": 732.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T21:42:58.351059+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000005.log"
+    },
+    {
+      "id": "exp_000006",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000002"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "cabe6855158249fc9a73ebb8600503dfc785baf4",
+      "hypothesis": "Extending the time-based learning-rate warmup from 10% to 15% will further stabilize early embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T21:42:58.455651+00:00",
+      "started_at": "2026-09-16T21:42:58.455661+00:00",
+      "training_started_at": "2026-09-16T21:43:34.718815+00:00",
+      "result": {
+        "val_bpb": 2.007076,
+        "training_seconds": 303.7,
+        "total_seconds": 726.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T21:55:43.235305+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000006.log"
+    },
+    {
+      "id": "exp_000007",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000003"
+      ],
+      "descendants": 5,
+      "best_child_result": 2.018828,
+      "commit": "6ad29b4ef6abaaf69ea685b29772871e80bc9d07",
+      "hypothesis": "Extending the time-based learning-rate warmdown from 50% to 60% of the 300-second budget will reduce late-training overshoot while preserving a smoother optimization trajectory, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T21:55:43.352885+00:00",
+      "started_at": "2026-09-16T21:55:43.352897+00:00",
+      "training_started_at": "2026-09-16T21:56:16.362647+00:00",
+      "result": {
+        "val_bpb": 2.012509,
+        "training_seconds": 304.2,
+        "total_seconds": 725.6,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T22:08:24.385837+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000007.log"
+    },
+    {
+      "id": "exp_000008",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000007"
+      ],
+      "descendants": 2,
+      "best_child_result": 2.038977,
+      "commit": "fe3bae9f935865ccae0f12bc674d39ce9503eee3",
+      "hypothesis": "Extending the time-based learning-rate warmdown from 60% to 70% of the 300-second budget will further reduce late-training overshoot and improve final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T22:08:24.481703+00:00",
+      "started_at": "2026-09-16T22:08:24.481713+00:00",
+      "training_started_at": "2026-09-16T22:09:06.270038+00:00",
+      "result": {
+        "val_bpb": 2.021893,
+        "training_seconds": 303.6,
+        "total_seconds": 722.3,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T22:21:10.873973+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000008.log"
+    },
+    {
+      "id": "exp_000009",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000002"
+      ],
+      "descendants": 2,
+      "best_child_result": 2.017869,
+      "commit": "e0ee783f05dd27d28c85a1f3baa43702c30f139e",
+      "hypothesis": "Extending the time-based learning-rate warmup from 10% to 15% will further moderate early embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T22:21:10.978455+00:00",
+      "started_at": "2026-09-16T22:21:10.978464+00:00",
+      "training_started_at": "2026-09-16T22:21:44.964916+00:00",
+      "result": {
+        "val_bpb": 2.007666,
+        "training_seconds": 304.6,
+        "total_seconds": 728.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T22:33:55.393832+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000009.log"
+    },
+    {
+      "id": "exp_000010",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000008"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.022813,
+      "commit": "3b7c6a1046981dbd6582a9059b7d6f58d096e03d",
+      "hypothesis": "Extending the time-based learning-rate warmdown from 70% to 80% of the 300-second budget will begin decay earlier, reduce late-training overshoot, and improve final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T22:33:55.497793+00:00",
+      "started_at": "2026-09-16T22:33:55.497802+00:00",
+      "training_started_at": "2026-09-16T22:34:38.243343+00:00",
+      "result": {
+        "val_bpb": 2.038977,
+        "training_seconds": 306.0,
+        "total_seconds": 729.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T22:46:49.746449+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000010.log"
+    },
+    {
+      "id": "exp_000011",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 2,
+      "best_child_result": 2.006191,
+      "commit": "bcc9ece15065eeb7572da30807a1543d931a8a92",
+      "hypothesis": "Reducing the token and value embedding Adam learning rate from 0.6 to 0.5 will reduce persistent embedding-update noise after warmup, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T22:46:49.844612+00:00",
+      "started_at": "2026-09-16T22:46:49.844623+00:00",
+      "training_started_at": "2026-09-16T22:47:27.717651+00:00",
+      "result": {
+        "val_bpb": 2.00463,
+        "training_seconds": 305.2,
+        "total_seconds": 726.4,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T22:59:36.493169+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000011.log"
+    },
+    {
+      "id": "exp_000012",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000005"
+      ],
+      "descendants": 7,
+      "best_child_result": 2.006898,
+      "commit": "8d11095986261d40bff7eeda7f2ad7832b1d1944",
+      "hypothesis": "Extending the time-based learning-rate warmup from 5% to 10% will further reduce early optimization transients from the high initial Muon and embedding learning rates, improving later validation bits per byte and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T22:59:36.601424+00:00",
+      "started_at": "2026-09-16T22:59:36.601433+00:00",
+      "training_started_at": "2026-09-16T23:00:07.453715+00:00",
+      "result": {
+        "val_bpb": 2.00294,
+        "training_seconds": 302.8,
+        "total_seconds": 722.8,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T23:12:12.719390+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000012.log"
+    },
+    {
+      "id": "exp_000013",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000009"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.019711,
+      "commit": "8153ced0b5eb97866db306a9c5bbdffbb1cc55d3",
+      "hypothesis": "Extending the time-based learning-rate warmup from 15% to 20% will further moderate the high embedding and matrix learning rates during early training, reducing overshoot and improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T23:12:12.826957+00:00",
+      "started_at": "2026-09-16T23:12:12.826967+00:00",
+      "training_started_at": "2026-09-16T23:13:03.503366+00:00",
+      "result": {
+        "val_bpb": 2.017869,
+        "training_seconds": 305.2,
+        "total_seconds": 727.8,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T23:25:13.736272+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000013.log"
+    },
+    {
+      "id": "exp_000014",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000012"
+      ],
+      "descendants": 3,
+      "best_child_result": 2.016139,
+      "commit": "3a21093db75a427cff13c79a88f778c6b7ea19d4",
+      "hypothesis": "Extending the time-based learning-rate warmup from 10% to 15% will further reduce early optimization transients from the high initial Muon and embedding learning rates, improving later validation bits per byte and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T23:25:13.837504+00:00",
+      "started_at": "2026-09-16T23:25:13.837512+00:00",
+      "training_started_at": "2026-09-16T23:25:44.302946+00:00",
+      "result": {
+        "val_bpb": 2.006898,
+        "training_seconds": 303.7,
+        "total_seconds": 722.6,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T23:37:49.187909+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000014.log"
+    },
+    {
+      "id": "exp_000015",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000011"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.007734,
+      "commit": "8f44cc415ed32a8d40f80d06f2d3040986d82c48",
+      "hypothesis": "Reducing the token and value embedding Adam learning rate from 0.5 to 0.4 will further reduce persistent embedding-update noise after warmup, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T23:37:49.297238+00:00",
+      "started_at": "2026-09-16T23:37:49.297248+00:00",
+      "training_started_at": "2026-09-16T23:38:18.133058+00:00",
+      "result": {
+        "val_bpb": 2.006191,
+        "training_seconds": 306.2,
+        "total_seconds": 728.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-16T23:50:28.449013+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000015.log"
+    },
+    {
+      "id": "exp_000016",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 2,
+      "best_child_result": 2.016971,
+      "commit": "2f707fe6ca2b62846df4b520257fe2e90bd848d4",
+      "hypothesis": "Extending the time-based learning-rate warmup from 10% to 15% will further reduce early optimization shock to the high-rate embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-16T23:50:28.561785+00:00",
+      "started_at": "2026-09-16T23:50:28.561806+00:00",
+      "training_started_at": "2026-09-16T23:50:57.300112+00:00",
+      "result": {
+        "val_bpb": 2.008598,
+        "training_seconds": 306.4,
+        "total_seconds": 730.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T00:03:10.067786+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000016.log"
+    },
+    {
+      "id": "exp_000017",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000012"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "8ec05488e29055181bd6c0e32c47e8a0b9cb29ea",
+      "hypothesis": "Extending the time-based learning-rate warmup from 10% to 15% will further moderate the early high Muon and embedding updates, reducing optimization transients and improving later validation bits per byte to lower val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T00:03:10.172037+00:00",
+      "started_at": "2026-09-17T00:03:10.172046+00:00",
+      "training_started_at": "2026-09-17T00:03:43.793548+00:00",
+      "result": {
+        "val_bpb": 2.008339,
+        "training_seconds": 307.0,
+        "total_seconds": 725.9,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T00:15:52.002708+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000017.log"
+    },
+    {
+      "id": "exp_000018",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000016"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.021557,
+      "commit": "0365a5b5c10e0f1250e3318d770b272bc0bc166a",
+      "hypothesis": "Extending the time-based learning-rate warmup from 15% to 20% will further reduce early optimization shock to the high-rate embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T00:15:52.114339+00:00",
+      "started_at": "2026-09-17T00:15:52.114350+00:00",
+      "training_started_at": "2026-09-17T00:16:28.317777+00:00",
+      "result": {
+        "val_bpb": 2.016971,
+        "training_seconds": 303.5,
+        "total_seconds": 725.6,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T00:28:36.209016+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000018.log"
+    },
+    {
+      "id": "exp_000019",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000007"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.007479,
+      "commit": "bdb3fde9b8e7b97f3ebe6004b77cc6a9346d3b27",
+      "hypothesis": "With the 60% time-based warmdown retained, replacing the linear learning-rate decay with a cosine decay will make the late-training transition smoother, reducing optimization shock and improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T00:28:36.314183+00:00",
+      "started_at": "2026-09-17T00:28:36.314192+00:00",
+      "training_started_at": "2026-09-17T00:29:05.571279+00:00",
+      "result": {
+        "val_bpb": 2.018828,
+        "training_seconds": 306.0,
+        "total_seconds": 727.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T00:41:15.660535+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000019.log"
+    },
+    {
+      "id": "exp_000020",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000012"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.016727,
+      "commit": "443f876f075cfc9c5ca8bd31295a49c867d03f59",
+      "hypothesis": "Extending the time-based learning-rate warmup from the parent's 10% to 15% will further reduce early optimization transients from the high initial Muon and embedding learning rates, improving later validation bits per byte and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T00:41:15.775592+00:00",
+      "started_at": "2026-09-17T00:41:15.775604+00:00",
+      "training_started_at": "2026-09-17T00:41:46.963099+00:00",
+      "result": {
+        "val_bpb": 2.007814,
+        "training_seconds": 305.0,
+        "total_seconds": 727.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T00:53:56.401245+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000020.log"
+    },
+    {
+      "id": "exp_000021",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000014"
+      ],
+      "descendants": 1,
+      "best_child_result": 2.027472,
+      "commit": "e83a41c1bc4aa2983ba7bb66b064a7a2eb1f70da",
+      "hypothesis": "Extending the time-based learning-rate warmup from 15% to 20% will further stabilize the high initial Muon and embedding learning rates, improving later validation bits per byte and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T00:53:56.521138+00:00",
+      "started_at": "2026-09-17T00:53:56.521148+00:00",
+      "training_started_at": "2026-09-17T00:54:23.959835+00:00",
+      "result": {
+        "val_bpb": 2.017409,
+        "training_seconds": 306.1,
+        "total_seconds": 726.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T01:06:32.812325+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000021.log"
+    },
+    {
+      "id": "exp_000022",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000015"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "eaf303eca88ef91b833c9d860469dc6c4616481c",
+      "hypothesis": "Reducing the shared token and value embedding Adam learning rate from the parent\u2019s 0.4 to 0.3 will further suppress late-training embedding-update noise, improving final validation BPB without changing the rest of the optimization setup.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T01:06:32.929250+00:00",
+      "started_at": "2026-09-17T01:06:32.929260+00:00",
+      "training_started_at": "2026-09-17T01:07:03.770609+00:00",
+      "result": {
+        "val_bpb": 2.007734,
+        "training_seconds": 305.5,
+        "total_seconds": 727.4,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T01:19:13.460467+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000022.log"
+    },
+    {
+      "id": "exp_000023",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000021"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "4f68ad365a96979fca5061190a87f191119e74d4",
+      "hypothesis": "Extending the time-based learning-rate warmdown from 50% to 60% will reduce late-training update magnitudes more gradually, allowing steadier refinement after the 20% warmup and lowering final val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T01:19:13.564284+00:00",
+      "started_at": "2026-09-17T01:19:13.564293+00:00",
+      "training_started_at": "2026-09-17T01:19:48.649592+00:00",
+      "result": {
+        "val_bpb": 2.027472,
+        "training_seconds": 303.5,
+        "total_seconds": 724.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T01:31:54.907467+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000023.log"
+    },
+    {
+      "id": "exp_000024",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000020"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "f56a6a7d17b4b11c57ddc22f88575245f6196364",
+      "hypothesis": "With the parent already using a 15% time-based warmup, extending the linear learning-rate warmdown from 50% to 60% of training time will preserve a useful near-peak learning rate longer while making the final decay gentler, improving late optimization and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T01:31:55.015092+00:00",
+      "started_at": "2026-09-17T01:31:55.015102+00:00",
+      "training_started_at": "2026-09-17T01:32:31.074899+00:00",
+      "result": {
+        "val_bpb": 2.016727,
+        "training_seconds": 303.8,
+        "total_seconds": 724.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T01:44:37.730895+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000024.log"
+    },
+    {
+      "id": "exp_000025",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000013"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "aa8b13f91f3bdd1428e55e5b905ed4459282241c",
+      "hypothesis": "Extending the time-based learning-rate warmup from 20% to 25% will further moderate the high embedding and matrix learning rates during early training, reducing overshoot and improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T01:44:37.834723+00:00",
+      "started_at": "2026-09-17T01:44:37.834732+00:00",
+      "training_started_at": "2026-09-17T01:45:10.565848+00:00",
+      "result": {
+        "val_bpb": 2.019711,
+        "training_seconds": 300.4,
+        "total_seconds": 721.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T01:57:13.819598+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000025.log"
+    },
+    {
+      "id": "exp_000026",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000019"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "2c4d2e3b684a6f50871e372950ee92abb20207cf",
+      "hypothesis": "Keeping the 60% time-based cosine warmdown but ending at 10% of the initial learning rate instead of zero will preserve useful late-training adaptation, reducing premature optimization stagnation and lowering final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T01:57:13.925815+00:00",
+      "started_at": "2026-09-17T01:57:13.925824+00:00",
+      "training_started_at": "2026-09-17T01:57:42.291590+00:00",
+      "result": {
+        "val_bpb": 2.007479,
+        "training_seconds": 303.2,
+        "total_seconds": 723.6,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T02:09:48.141162+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000026.log"
+    },
+    {
+      "id": "exp_000027",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000018"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "6a0f8ae99d1e47d85f4dc3e3385a1eafc644873a",
+      "hypothesis": "Extending the time-based learning-rate warmup from 20% to 25% will further reduce early optimization shock to the high-rate embedding and matrix updates, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T02:09:48.253451+00:00",
+      "started_at": "2026-09-17T02:09:48.253461+00:00",
+      "training_started_at": "2026-09-17T02:10:17.285197+00:00",
+      "result": {
+        "val_bpb": 2.021557,
+        "training_seconds": 303.1,
+        "total_seconds": 721.3,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T02:22:20.750036+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000027.log"
+    },
+    {
+      "id": "exp_000028",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "41c6d702f45ff57e5ccb2056e0d6eaf4bd7be19c",
+      "hypothesis": "Extending the time-based learning-rate warmup from 5% to 10% will further stabilize the initially large embedding and matrix updates, preserving a better optimization trajectory and lowering final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T02:22:20.861265+00:00",
+      "started_at": "2026-09-17T02:22:20.861280+00:00",
+      "training_started_at": "2026-09-17T02:22:47.125838+00:00",
+      "result": {
+        "val_bpb": 2.003551,
+        "training_seconds": 304.6,
+        "total_seconds": 724.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T02:34:53.750522+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000028.log"
+    },
+    {
+      "id": "exp_000029",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000014"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "35bff2200b84147e95ddb93a92b2c543c93e163c",
+      "hypothesis": "Extending the time-based learning-rate warmup from 15% to 20% will further smooth the early optimization transient from the high initial Muon and embedding learning rates, improving later validation bits per byte and lowering val_bpb.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T02:34:53.865934+00:00",
+      "started_at": "2026-09-17T02:34:53.865943+00:00",
+      "training_started_at": "2026-09-17T02:35:25.544847+00:00",
+      "result": {
+        "val_bpb": 2.016139,
+        "training_seconds": 302.7,
+        "total_seconds": 723.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T02:47:31.569553+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000029.log"
+    },
+    {
+      "id": "exp_000030",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000010"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "5bce93a4073a26971d200efab9a3acf1714c8059",
+      "hypothesis": "With the parent's 80% time-based warmdown, retaining a 10% final learning-rate floor will preserve useful parameter adaptation in the last part of the 300-second run instead of stopping updates completely, improving final validation BPB.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T02:47:31.688984+00:00",
+      "started_at": "2026-09-17T02:47:31.688994+00:00",
+      "training_started_at": "2026-09-17T02:48:04.699431+00:00",
+      "result": {
+        "val_bpb": 2.022813,
+        "training_seconds": 304.5,
+        "total_seconds": 722.4,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T03:00:09.362179+00:00",
+      "log": "<source-archive>/autoresearch-tree-random-30/results/exp_000030.log"
+    }
+  ],
+  "rejected_merges": []
+}

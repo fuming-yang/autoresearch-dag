@@ -1,0 +1,24 @@
+{
+  "expand": {
+    "total": 18,
+    "successes": 2,
+    "worse": 16,
+    "equal": 0,
+    "success_rate": 0.1111111111111111,
+    "mean_delta_parent": 0.02619666666666667,
+    "median_delta_parent": 0.002977999999999925,
+    "best_delta_parent": -0.009125999999999967,
+    "worst_delta_parent": 0.185929,
+    "beat_baseline": 0,
+    "worse_than_baseline": 18
+  },
+  "merge": {
+    "total": 12,
+    "successes": 1,
+    "success_rate": 0.08333333333333333,
+    "mean_delta_best_parent": 0.04450183333333333,
+    "median_delta_best_parent": 0.008363499999999968,
+    "best_delta_best_parent": -0.0003049999999999997,
+    "worst_delta_best_parent": 0.12963600000000008
+  }
+}

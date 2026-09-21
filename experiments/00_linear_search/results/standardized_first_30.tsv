@@ -1,0 +1,32 @@
+commit	val_bpb	memory_gb	status	description
+1b4db1b	1.904472	11.8	keep	baseline (RTX 5070-compatible current code)
+979f819	1.873378	11.8	keep	remove short-run learning-rate warmdown
+39aeb80	1.800304	11.8	keep	reduce effective batch size to 262K tokens
+e474363	1.827590	11.8	discard	lower Muon matrix learning rate to 0.03
+9c6a43d	1.816040	11.8	discard	lower embedding learning rate to 0.4
+137ea6c	1.821451	11.8	discard	lower unembedding learning rate to 0.002
+c73c97f	1.816106	11.8	discard	smooth Adam first moment with beta1 0.9
+9d28332	1.566236	10.9	keep	test seven-layer model
+b8d953c	1.445342	8.4	keep	test six-layer model
+bb62ea3	1.401523	7.7	keep	test five-layer model
+a55a6bb	1.359300	6.0	keep	test four-layer model
+270c8a0	1.340940	5.5	keep	test three-layer model
+a200736	1.420063	4.5	discard	test two-layer model
+cf84674	1.340460	5.5	keep	widen three-layer model to aspect ratio 80
+f20e609	1.354490	6.3	discard	widen model to aspect ratio 96
+fafef7e	1.348339	5.5	discard	use full attention windows
+5f59e22	1.344571	5.5	discard	add second full attention layer with SLL pattern
+1eb943f	1.344166	5.5	discard	move short attention layer with LSL pattern
+75dc7ed	1.340429	5.5	keep	retest aspect ratio 64 at depth 3
+95a242a	1.347721	5.2	discard	use 64-dimensional attention heads
+4ea82e6	1.361461	5.5	discard	use one wide attention head
+c7d9fa3	1.331500	5.5	keep	raise Muon matrix learning rate to 0.06
+764b1ac	1.333942	5.5	discard	raise Muon matrix learning rate to 0.08
+3ec6ed6	1.334230	5.5	discard	test intermediate matrix learning rate 0.05
+11b4250	1.331674	5.5	discard	test matrix learning rate 0.07
+da5d432	1.331532	5.5	discard	test matrix learning rate 0.055
+6383fcd	1.324405	5.5	keep	lower scalar learning rate to 0.25
+54776d5	1.324037	5.5	keep	reduce Muon weight decay to 0.1
+a3bb2f6	1.325958	5.5	discard	remove Muon weight decay
+5ff592a	1.325242	5.5	discard	raise embedding learning rate to 0.8
+7948d63	1.328349	5.5	discard	add short learning-rate warmup

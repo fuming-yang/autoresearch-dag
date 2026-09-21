@@ -1,0 +1,5 @@
+run	val_bpb	num_steps	target_steps	training_seconds	total_seconds	total_tokens_M	tokens_processed	seed	peak_vram_mb	log
+1	1.906045	20	20	310.2	825.5	10.5	10485760	42	12128.0	logs/run_01.log
+2	1.902874	21	21	327.9	836.7	11.0	11010048	42	12128.0	logs/run_02.log
+3	1.905279	20	20	304.7	816.3	10.5	10485760	42	12128.0	logs/run_03.log
+4	1.888005	23	23	315.0	748.6	12.1	12058624	42	12128.0	logs/run_04.log

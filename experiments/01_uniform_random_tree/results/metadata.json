@@ -1,0 +1,7 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Uniform Random Tree Search",
+  "source": "checkpoints/autoresearch-tree-random-30-final at source commit f51f1ca",
+  "valid_candidates": 30,
+  "figure_candidates_shown": 30
+}

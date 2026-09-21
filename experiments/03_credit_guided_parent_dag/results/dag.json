@@ -1,0 +1,1627 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "exp_000000",
+      "status": "finished",
+      "mode": "baseline",
+      "parents": [],
+      "descendants": 32,
+      "best_child_result": 1.895905,
+      "commit": "9de0bd287817372a3be2c5370b5de154efc14fd1",
+      "hypothesis": "baseline",
+      "worker_slot": 0,
+      "created_at": "2026-09-15T00:00:00+00:00",
+      "started_at": "2026-09-15T00:00:00+00:00",
+      "finished_at": "2026-09-15T00:00:00+00:00",
+      "result": {
+        "val_bpb": 1.885642,
+        "training_seconds": 307.2,
+        "total_seconds": 740.2,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000000.log"
+    },
+    {
+      "id": "exp_000001",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 5,
+      "best_child_result": 1.912576,
+      "commit": "3fbb1aad46c797a0860a44747f4bb4139100b96d",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.04 to 0.03 should reduce overly aggressive matrix updates, improving optimization stability and lowering validation bits per byte.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T14:27:14.372803+00:00",
+      "started_at": "2026-09-17T14:27:14.372813+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 0,
+        "selected": [
+          {
+            "id": "exp_000000",
+            "val_bpb": 1.885642,
+            "Q": 0.0,
+            "E": 0.0,
+            "H": 0.0,
+            "credit": 0.0,
+            "n_v_before": 0,
+            "current_T": 0,
+            "selection_probability": 1.0
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T14:27:56.295410+00:00",
+      "result": {
+        "val_bpb": 1.912973,
+        "training_seconds": 303.4,
+        "total_seconds": 818.9,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-17T14:41:39.271006+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000001.log"
+    },
+    {
+      "id": "exp_000002",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000001"
+      ],
+      "descendants": 3,
+      "best_child_result": 1.919487,
+      "commit": "48f316917135b976fd508d3a59edc47ab651d638",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.03 to 0.025 should further moderate matrix updates, improving optimization stability and lowering validation bits per byte.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T14:47:49.304209+00:00",
+      "started_at": "2026-09-17T14:47:49.304217+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 1,
+        "selected": [
+          {
+            "id": "exp_000001",
+            "val_bpb": 1.912973,
+            "Q": -2.7330999999999994,
+            "E": 0.0,
+            "H": 0.8325546111576977,
+            "credit": -2.3168226944211505,
+            "n_v_before": 0,
+            "current_T": 1,
+            "selection_probability": 0.22363192895176312
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T14:48:20.878785+00:00",
+      "result": {
+        "val_bpb": 1.912576,
+        "training_seconds": 309.2,
+        "total_seconds": 793.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 21,
+        "target_steps": 21
+      },
+      "finished_at": "2026-09-17T15:01:37.047184+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000002.log"
+    },
+    {
+      "id": "exp_000003",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000002"
+      ],
+      "descendants": 2,
+      "best_child_result": 1.909636,
+      "commit": "9216ffc09177089cfe989a7a1a3c02f46b93699b",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.025 to 0.020 should further moderate matrix updates, improving optimization stability and lowering validation bits per byte.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T15:01:37.256599+00:00",
+      "started_at": "2026-09-17T15:01:37.256610+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 2,
+        "selected": [
+          {
+            "id": "exp_000002",
+            "val_bpb": 1.912576,
+            "Q": -2.6934000000000013,
+            "E": 0.0,
+            "H": 1.048147073968205,
+            "credit": -2.169326463015899,
+            "n_v_before": 0,
+            "current_T": 2,
+            "selection_probability": 0.19709647256682986
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T15:02:07.236099+00:00",
+      "result": {
+        "val_bpb": 1.919487,
+        "training_seconds": 303.0,
+        "total_seconds": 817.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-17T15:15:46.945107+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000003.log"
+    },
+    {
+      "id": "exp_000004",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 25,
+      "best_child_result": 1.901637,
+      "commit": "1c9ee4e9f83dc790050076c8ff4aecf9229ceadf",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.04 to 0.03 should reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T15:17:09.500355+00:00",
+      "started_at": "2026-09-17T15:17:09.500363+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 3,
+        "selected": [
+          {
+            "id": "exp_000000",
+            "val_bpb": 1.885642,
+            "Q": 0.0,
+            "E": -2.7330999999999994,
+            "H": 0.8325546111576977,
+            "credit": -0.9502726944211508,
+            "n_v_before": 1,
+            "current_T": 3,
+            "selection_probability": 0.62272867975539
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T15:17:57.134505+00:00",
+      "result": {
+        "val_bpb": 1.895905,
+        "training_seconds": 323.6,
+        "total_seconds": 741.4,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T15:30:20.968143+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000004.log"
+    },
+    {
+      "id": "exp_000005",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 3,
+      "best_child_result": 1.906433,
+      "commit": "b46c350c7a054e7c561f24cdabb570d76c2c4e62",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.03 to 0.025 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T15:31:57.301230+00:00",
+      "started_at": "2026-09-17T15:31:57.301243+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 4,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": 0.0,
+            "H": 1.2686362411795196,
+            "credit": -0.3919818794102313,
+            "n_v_before": 0,
+            "current_T": 4,
+            "selection_probability": 0.4559616457437623
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T15:32:51.180670+00:00",
+      "result": {
+        "val_bpb": 1.901637,
+        "training_seconds": 324.8,
+        "total_seconds": 742.6,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T15:45:16.203264+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000005.log"
+    },
+    {
+      "id": "exp_000006",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.906532,
+      "commit": "78812cfd4b82886bbf5f9d9c3cd85b83fcf46a01",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.03 to 0.025 should further limit late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T15:45:47.536819+00:00",
+      "started_at": "2026-09-17T15:45:47.536828+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 5,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.573200000000007,
+            "H": 0.9465092364124227,
+            "credit": -0.8396453817937832,
+            "n_v_before": 1,
+            "current_T": 5,
+            "selection_probability": 0.2616061577357696
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T15:46:29.239605+00:00",
+      "result": {
+        "val_bpb": 1.901868,
+        "training_seconds": 301.2,
+        "total_seconds": 720.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T15:58:32.366938+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000006.log"
+    },
+    {
+      "id": "exp_000007",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000003"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "fbdcaa53040725694649fc71686c524526144178",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.020 to 0.015 should further moderate matrix updates, improving optimization stability and lowering validation bits per byte.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T15:58:32.503214+00:00",
+      "started_at": "2026-09-17T15:58:32.503229+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 6,
+        "selected": [
+          {
+            "id": "exp_000003",
+            "val_bpb": 1.919487,
+            "Q": -3.3844999999999903,
+            "E": 0.0,
+            "H": 1.3949588341794583,
+            "credit": -2.687020582910261,
+            "n_v_before": 0,
+            "current_T": 6,
+            "selection_probability": 0.033343849721386445
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T15:59:09.177483+00:00",
+      "result": {
+        "val_bpb": 1.909636,
+        "training_seconds": 324.2,
+        "total_seconds": 742.3,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T16:11:34.257833+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000007.log"
+    },
+    {
+      "id": "exp_000008",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000000"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "b9e0edab689e8f8c1c5b4b614fefc724062518aa",
+      "hypothesis": "Add a 5% linear learning-rate warmup so the high initial embedding, scalar, and Muon update magnitudes ramp in gradually; this should improve early optimization stability and lower final val_bpb within the fixed training budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T16:11:34.385320+00:00",
+      "started_at": "2026-09-17T16:11:34.385329+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 7,
+        "selected": [
+          {
+            "id": "exp_000000",
+            "val_bpb": 1.885642,
+            "Q": 0.0,
+            "E": -1.8796999999999953,
+            "H": 0.8325546111576977,
+            "credit": -0.5235726944211487,
+            "n_v_before": 2,
+            "current_T": 7,
+            "selection_probability": 0.2588577157242079
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T16:12:15.177305+00:00",
+      "result": {
+        "val_bpb": 1.998774,
+        "training_seconds": 324.3,
+        "total_seconds": 741.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T16:24:38.396973+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000008.log"
+    },
+    {
+      "id": "exp_000009",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 8,
+      "best_child_result": 1.906611,
+      "commit": "33f192bf5be6419d99f83a51b79133f3c4c8b1a5",
+      "hypothesis": "Further lowering the Muon matrix learning rate from 0.03 to 0.02 should reduce residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T16:25:38.873933+00:00",
+      "started_at": "2026-09-17T16:25:38.873947+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 8,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.5847500000000005,
+            "H": 0.8558085022044397,
+            "credit": -0.8907707488977715,
+            "n_v_before": 2,
+            "current_T": 8,
+            "selection_probability": 0.22265733070486918
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T16:26:15.273702+00:00",
+      "result": {
+        "val_bpb": 1.906027,
+        "training_seconds": 323.4,
+        "total_seconds": 745.2,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T16:38:42.710146+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000009.log"
+    },
+    {
+      "id": "exp_000010",
+      "status": "failed",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "ae5d60916d79ef352107d49b3112c2fb4abfc1b4",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.04 to 0.03 should reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T16:39:16.633918+00:00",
+      "started_at": "2026-09-17T16:39:16.633926+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 9,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.7272333333333325,
+            "H": 0.7587135646925732,
+            "credit": -1.0105598843203707,
+            "n_v_before": 3,
+            "current_T": 9,
+            "selection_probability": 0.173544621516666
+          }
+        ]
+      },
+      "error": "agent accepted the experiment without changing train.py",
+      "finished_at": "2026-09-17T16:40:09.098403+00:00"
+    },
+    {
+      "id": "exp_000011",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000003"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "bb842c12abe13cb2b48c3ffa4841a55e4d09f77e",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.020 to 0.015 should further moderate matrix updates, improving optimization stability and lowering validation bits per byte.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T16:40:09.204672+00:00",
+      "started_at": "2026-09-17T16:40:09.204696+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 9,
+        "selected": [
+          {
+            "id": "exp_000003",
+            "val_bpb": 1.919487,
+            "Q": -3.3844999999999903,
+            "E": 0.9851000000000054,
+            "H": 1.0729830131446736,
+            "credit": -2.355458493427651,
+            "n_v_before": 1,
+            "current_T": 9,
+            "selection_probability": 0.04521984963912103
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T16:40:45.494049+00:00",
+      "result": {
+        "val_bpb": 1.909989,
+        "training_seconds": 302.0,
+        "total_seconds": 723.3,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T16:52:51.023684+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000011.log"
+    },
+    {
+      "id": "exp_000012",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 12,
+      "best_child_result": 1.902077,
+      "commit": "082888bf9cff3ff38bac1aacc2518340974df2be",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.03 to 0.025 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T16:53:17.694988+00:00",
+      "started_at": "2026-09-17T16:53:17.694997+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 10,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.7272333333333325,
+            "H": 0.7742569458516938,
+            "credit": -1.0027881937408105,
+            "n_v_before": 3,
+            "current_T": 10,
+            "selection_probability": 0.15912989667565502
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T16:54:00.891466+00:00",
+      "result": {
+        "val_bpb": 1.902106,
+        "training_seconds": 302.6,
+        "total_seconds": 723.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T17:06:06.785166+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000012.log"
+    },
+    {
+      "id": "exp_000013",
+      "status": "failed",
+      "mode": "merge",
+      "parents": [
+        "exp_000012",
+        "exp_000001"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "60137c2cd227b03c6e5617324c8eff1e32a01206",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.04 to 0.03 improves optimization stability, and a further reduction to 0.025 should additionally reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T17:06:06.919477+00:00",
+      "started_at": "2026-09-17T17:06:06.919487+00:00",
+      "parent_selection": {
+        "operation": "merge",
+        "current_T": 11,
+        "selected": [
+          {
+            "id": "exp_000012",
+            "val_bpb": 1.902106,
+            "Q": -1.6464000000000034,
+            "E": 0.0,
+            "H": 1.5763586678760644,
+            "credit": -0.8582206660619712,
+            "n_v_before": 0,
+            "current_T": 11,
+            "selection_probability": 0.15434229964717303
+          },
+          {
+            "id": "exp_000001",
+            "val_bpb": 1.912973,
+            "Q": -2.7330999999999994,
+            "E": 0.03969999999999807,
+            "H": 1.1146539036373577,
+            "credit": -2.1559230481813216,
+            "n_v_before": 1,
+            "current_T": 11,
+            "selection_probability": 0.04985461597643161
+          }
+        ]
+      },
+      "error": "agent accepted the experiment without changing train.py",
+      "finished_at": "2026-09-17T17:06:44.875910+00:00"
+    },
+    {
+      "id": "exp_000014",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000012"
+      ],
+      "descendants": 3,
+      "best_child_result": 1.909673,
+      "commit": "e4464095347c49e89b289f08c1713079f2c3f819",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.025 to 0.02 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T17:07:41.373687+00:00",
+      "started_at": "2026-09-17T17:07:41.373696+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 11,
+        "selected": [
+          {
+            "id": "exp_000012",
+            "val_bpb": 1.902106,
+            "Q": -1.6464000000000034,
+            "E": 0.0,
+            "H": 1.5763586678760644,
+            "credit": -0.8582206660619712,
+            "n_v_before": 0,
+            "current_T": 11,
+            "selection_probability": 0.15434229964717303
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T17:08:14.577374+00:00",
+      "result": {
+        "val_bpb": 1.90638,
+        "training_seconds": 300.7,
+        "total_seconds": 721.6,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T17:20:18.656165+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000014.log"
+    },
+    {
+      "id": "exp_000015",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000004"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "f805ff90c72b7d50d855ac09fe16a65149ec4838",
+      "hypothesis": "Further lowering the Muon matrix learning rate from 0.03 to 0.025 should reduce residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T17:20:18.815347+00:00",
+      "started_at": "2026-09-17T17:20:18.815361+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 12,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.7004500000000025,
+            "H": 0.7162331125355119,
+            "credit": -1.0184084437322365,
+            "n_v_before": 4,
+            "current_T": 12,
+            "selection_probability": 0.12446351707570423
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T17:21:03.511152+00:00",
+      "result": {
+        "val_bpb": 1.90187,
+        "training_seconds": 301.0,
+        "total_seconds": 719.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T17:33:04.842439+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000015.log"
+    },
+    {
+      "id": "exp_000016",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000004",
+        "exp_000012"
+      ],
+      "descendants": 6,
+      "best_child_result": 1.905898,
+      "commit": "9199e6018d69ce05b15e3219e3d4c0e28488e31d",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.04 to 0.025 through the compatible intermediate setting of 0.03 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T17:33:04.979908+00:00",
+      "started_at": "2026-09-17T17:33:04.979918+00:00",
+      "parent_selection": {
+        "operation": "merge",
+        "current_T": 13,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.6796600000000019,
+            "H": 0.6632065200744107,
+            "credit": -1.0345267399627867,
+            "n_v_before": 5,
+            "current_T": 13,
+            "selection_probability": 0.10554422654757122
+          },
+          {
+            "id": "exp_000012",
+            "val_bpb": 1.902106,
+            "Q": -1.6464000000000034,
+            "E": -0.4273999999999889,
+            "H": 1.1487073886798278,
+            "credit": -1.285746305660084,
+            "n_v_before": 1,
+            "current_T": 13,
+            "selection_probability": 0.09178513242645567
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T17:33:47.416221+00:00",
+      "result": {
+        "val_bpb": 1.902077,
+        "training_seconds": 302.3,
+        "total_seconds": 723.4,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T17:45:53.077030+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000016.log"
+    },
+    {
+      "id": "exp_000017",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000006"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "93aaa869c4a0440098a13ef038661d10cfe9f129",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.025 to 0.020 should further limit late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T17:45:53.211096+00:00",
+      "started_at": "2026-09-17T17:45:53.211105+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 15,
+        "selected": [
+          {
+            "id": "exp_000006",
+            "val_bpb": 1.901868,
+            "Q": -1.6225999999999852,
+            "E": 0.0,
+            "H": 1.6651092223153954,
+            "credit": -0.7900453888422875,
+            "n_v_before": 0,
+            "current_T": 15,
+            "selection_probability": 0.1174414431923955
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T17:46:48.282702+00:00",
+      "result": {
+        "val_bpb": 1.906532,
+        "training_seconds": 301.7,
+        "total_seconds": 721.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T17:58:52.231505+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000017.log"
+    },
+    {
+      "id": "exp_000018",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000009",
+        "exp_000016"
+      ],
+      "descendants": 4,
+      "best_child_result": 1.909717,
+      "commit": "f00f6b8111ab7718a408157378a65fd8c808f5d5",
+      "hypothesis": "The two ideas are compatible sequential reductions of the Muon matrix learning rate: lowering it through 0.03 to 0.025 and then further to 0.02 should reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T17:59:28.557015+00:00",
+      "started_at": "2026-09-17T17:59:28.557024+00:00",
+      "parent_selection": {
+        "operation": "merge",
+        "current_T": 16,
+        "selected": [
+          {
+            "id": "exp_000009",
+            "val_bpb": 1.906027,
+            "Q": -2.0384999999999875,
+            "E": 0.0,
+            "H": 1.6832151805566085,
+            "credit": -1.1968924097216833,
+            "n_v_before": 0,
+            "current_T": 16,
+            "selection_probability": 0.07538898351009647
+          },
+          {
+            "id": "exp_000016",
+            "val_bpb": 1.902077,
+            "Q": -1.6434999999999977,
+            "E": 0.0,
+            "H": 1.6832151805566085,
+            "credit": -0.8018924097216935,
+            "n_v_before": 0,
+            "current_T": 16,
+            "selection_probability": 0.12103058831898042
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T18:00:05.501314+00:00",
+      "result": {
+        "val_bpb": 1.906611,
+        "training_seconds": 302.5,
+        "total_seconds": 723.8,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T18:12:11.986606+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000018.log"
+    },
+    {
+      "id": "exp_000019",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000009"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "e4cddc44c87760ef255827cb8b2c515f12855415",
+      "hypothesis": "Further lowering the Muon matrix learning rate from 0.02 to 0.015 should continue reducing residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T18:14:09.278010+00:00",
+      "started_at": "2026-09-17T18:14:09.278021+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 18,
+        "selected": [
+          {
+            "id": "exp_000009",
+            "val_bpb": 1.906027,
+            "Q": -2.0384999999999875,
+            "E": -0.058400000000013996,
+            "H": 1.213350522142394,
+            "credit": -1.4610247389287976,
+            "n_v_before": 1,
+            "current_T": 18,
+            "selection_probability": 0.05650965373534372
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T18:14:50.779329+00:00",
+      "result": {
+        "val_bpb": 1.909912,
+        "training_seconds": 301.4,
+        "total_seconds": 721.7,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T18:26:54.856508+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000019.log"
+    },
+    {
+      "id": "exp_000020",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000005"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.909868,
+      "commit": "a6f52c779a8a94b71645188b9086fe23b33f3432",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.025 to 0.02 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T18:27:24.040669+00:00",
+      "started_at": "2026-09-17T18:27:24.040677+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 19,
+        "selected": [
+          {
+            "id": "exp_000005",
+            "val_bpb": 1.901637,
+            "Q": -1.5994999999999981,
+            "E": 0.0,
+            "H": 1.7308183826022854,
+            "credit": -0.7340908086988555,
+            "n_v_before": 0,
+            "current_T": 19,
+            "selection_probability": 0.11163699447862742
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T18:28:10.840350+00:00",
+      "result": {
+        "val_bpb": 1.906433,
+        "training_seconds": 301.2,
+        "total_seconds": 719.8,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T18:40:12.745960+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000020.log"
+    },
+    {
+      "id": "exp_000021",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000009"
+      ],
+      "descendants": 4,
+      "best_child_result": 1.909717,
+      "commit": "5741eff99e4c296e2e7dbd4102dd8a9d875f653d",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.02 to 0.015 should further reduce residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T18:40:43.802122+00:00",
+      "started_at": "2026-09-17T18:40:43.802137+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 20,
+        "selected": [
+          {
+            "id": "exp_000009",
+            "val_bpb": 1.906027,
+            "Q": -2.0384999999999875,
+            "E": -0.22345000000001392,
+            "H": 1.0073930774898516,
+            "credit": -1.6465284612550688,
+            "n_v_before": 2,
+            "current_T": 20,
+            "selection_probability": 0.04345889624029805
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T18:41:45.978089+00:00",
+      "result": {
+        "val_bpb": 1.909924,
+        "training_seconds": 301.3,
+        "total_seconds": 721.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T18:53:49.291925+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000021.log"
+    },
+    {
+      "id": "exp_000022",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000020"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "287c4ebde3e40c83d79f7be3cc4542938d5aedde",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.02 to 0.015 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T18:53:49.426154+00:00",
+      "started_at": "2026-09-17T18:53:49.426163+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 21,
+        "selected": [
+          {
+            "id": "exp_000020",
+            "val_bpb": 1.906433,
+            "Q": -2.0791000000000004,
+            "E": 0.0,
+            "H": 1.7581360736183977,
+            "credit": -1.2000319631908014,
+            "n_v_before": 0,
+            "current_T": 21,
+            "selection_probability": 0.06472661332605849
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T18:54:25.793061+00:00",
+      "result": {
+        "val_bpb": 1.909868,
+        "training_seconds": 301.3,
+        "total_seconds": 718.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T19:06:26.139665+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000022.log"
+    },
+    {
+      "id": "exp_000023",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000014"
+      ],
+      "descendants": 1,
+      "best_child_result": 1.911971,
+      "commit": "10d3e07726bf66d975f1073ffc373f47b2302de3",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.02 to 0.015 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T19:06:26.287132+00:00",
+      "started_at": "2026-09-17T19:06:26.287149+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 22,
+        "selected": [
+          {
+            "id": "exp_000014",
+            "val_bpb": 1.90638,
+            "Q": -2.0737999999999923,
+            "E": 0.0,
+            "H": 1.7707326777153998,
+            "credit": -1.1884336611422923,
+            "n_v_before": 0,
+            "current_T": 22,
+            "selection_probability": 0.0636641105627353
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T19:07:13.620312+00:00",
+      "result": {
+        "val_bpb": 1.909673,
+        "training_seconds": 324.8,
+        "total_seconds": 745.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T19:19:41.326423+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000023.log"
+    },
+    {
+      "id": "exp_000024",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000018",
+        "exp_000021"
+      ],
+      "descendants": 2,
+      "best_child_result": 1.912602,
+      "commit": "532ef6ab8f213d21c9cd8b809121bbb9c45a1331",
+      "hypothesis": "Sequentially lowering the Muon matrix learning rate through 0.03, 0.025, 0.02, and finally 0.015 should reduce residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T19:20:12.381997+00:00",
+      "started_at": "2026-09-17T19:20:12.382005+00:00",
+      "parent_selection": {
+        "operation": "merge",
+        "current_T": 23,
+        "selected": [
+          {
+            "id": "exp_000018",
+            "val_bpb": 1.906611,
+            "Q": -2.0969000000000015,
+            "E": 0.0,
+            "H": 1.782709687623856,
+            "credit": -1.2055451561880735,
+            "n_v_before": 0,
+            "current_T": 23,
+            "selection_probability": 0.060836097909176205
+          },
+          {
+            "id": "exp_000021",
+            "val_bpb": 1.909924,
+            "Q": -2.4281999999999915,
+            "E": 0.0,
+            "H": 1.782709687623856,
+            "credit": -1.5368451561880634,
+            "n_v_before": 0,
+            "current_T": 23,
+            "selection_probability": 0.046509127971561974
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T19:20:45.938832+00:00",
+      "result": {
+        "val_bpb": 1.909717,
+        "training_seconds": 325.1,
+        "total_seconds": 743.2,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T19:33:11.516022+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000024.log"
+    },
+    {
+      "id": "exp_000025",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000024"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "d485411ff1a2fd45c0af8b2e84675545405d146b",
+      "hypothesis": "Further lowering the Muon matrix learning rate from 0.015 to 0.010 should reduce the remaining late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T19:33:11.668312+00:00",
+      "started_at": "2026-09-17T19:33:11.668325+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 25,
+        "selected": [
+          {
+            "id": "exp_000024",
+            "val_bpb": 1.909717,
+            "Q": -2.407500000000007,
+            "E": 0.0,
+            "H": 1.8050198165176699,
+            "credit": -1.5049900917411718,
+            "n_v_before": 0,
+            "current_T": 25,
+            "selection_probability": 0.0440756437791228
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T19:33:41.728533+00:00",
+      "result": {
+        "val_bpb": 1.912602,
+        "training_seconds": 302.9,
+        "total_seconds": 723.1,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T19:45:47.103893+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000025.log"
+    },
+    {
+      "id": "exp_000026",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000005"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "7d250877ed8a552387af8a7fcd84fea1ea54c664",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.025 to 0.02 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T19:46:46.203523+00:00",
+      "started_at": "2026-09-17T19:46:46.203530+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 26,
+        "selected": [
+          {
+            "id": "exp_000005",
+            "val_bpb": 1.901637,
+            "Q": -1.5994999999999981,
+            "E": -0.47960000000000225,
+            "H": 1.2837127533066595,
+            "credit": -1.1974436233466696,
+            "n_v_before": 1,
+            "current_T": 26,
+            "selection_probability": 0.05863367481003826
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T19:47:33.059133+00:00",
+      "result": {
+        "val_bpb": 1.919416,
+        "training_seconds": 302.2,
+        "total_seconds": 816.8,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-17T20:01:14.115875+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000026.log"
+    },
+    {
+      "id": "exp_000027",
+      "status": "finished",
+      "mode": "merge",
+      "parents": [
+        "exp_000004",
+        "exp_000018"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "9d333b4bf67edc3800cdf1fb4cbd059ceab80694",
+      "hypothesis": "The ideas are distinct and compatible sequential reductions of the Muon matrix learning rate: reduce it from 0.04 to 0.03, then through 0.025 to 0.02, to reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T20:02:52.350643+00:00",
+      "started_at": "2026-09-17T20:02:52.350651+00:00",
+      "parent_selection": {
+        "operation": "merge",
+        "current_T": 27,
+        "selected": [
+          {
+            "id": "exp_000004",
+            "val_bpb": 1.895905,
+            "Q": -1.026299999999991,
+            "E": -0.6692500000000027,
+            "H": 0.6899487051508357,
+            "credit": -1.0159506474245745,
+            "n_v_before": 6,
+            "current_T": 27,
+            "selection_probability": 0.07034754578252946
+          },
+          {
+            "id": "exp_000018",
+            "val_bpb": 1.906611,
+            "Q": -2.0969000000000015,
+            "E": -0.3106000000000053,
+            "H": 1.2907758345613702,
+            "credit": -1.606812082719319,
+            "n_v_before": 1,
+            "current_T": 27,
+            "selection_probability": 0.04191027106311318
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T20:04:17.624584+00:00",
+      "result": {
+        "val_bpb": 1.919107,
+        "training_seconds": 332.7,
+        "total_seconds": 851.8,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 21,
+        "target_steps": 21
+      },
+      "finished_at": "2026-09-17T20:18:33.701647+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000027.log"
+    },
+    {
+      "id": "exp_000028",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000024"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "5f9934f8d569eb2216ef6056c62232b4a794747b",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.015 to 0.01 should further reduce residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T20:18:34.063216+00:00",
+      "started_at": "2026-09-17T20:18:34.063229+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 29,
+        "selected": [
+          {
+            "id": "exp_000024",
+            "val_bpb": 1.909717,
+            "Q": -2.407500000000007,
+            "E": -0.28849999999998044,
+            "H": 1.3040700482838634,
+            "credit": -1.8997149758580654,
+            "n_v_before": 1,
+            "current_T": 29,
+            "selection_probability": 0.02896476161876313
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T20:19:22.077957+00:00",
+      "result": {
+        "val_bpb": 1.923173,
+        "training_seconds": 301.3,
+        "total_seconds": 812.2,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-17T20:32:57.202918+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000028.log"
+    },
+    {
+      "id": "exp_000029",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000016"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "68086e1778c23d0c44b8295dc6d00ac682ccbe4d",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.025 to 0.02 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T20:35:41.565712+00:00",
+      "started_at": "2026-09-17T20:35:41.565720+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 30,
+        "selected": [
+          {
+            "id": "exp_000016",
+            "val_bpb": 1.902077,
+            "Q": -1.6434999999999977,
+            "E": -0.4534000000000038,
+            "H": 1.310341025169621,
+            "credit": -1.215029487415189,
+            "n_v_before": 1,
+            "current_T": 30,
+            "selection_probability": 0.057117471216245545
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T20:36:14.686194+00:00",
+      "result": {
+        "val_bpb": 1.905898,
+        "training_seconds": 322.9,
+        "total_seconds": 739.0,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T20:48:36.260572+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000029.log"
+    },
+    {
+      "id": "exp_000030",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000014"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "bd6f1848503560f5573da568b18dcb6c07f4da8b",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.02 to 0.018 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T20:49:08.598689+00:00",
+      "started_at": "2026-09-17T20:49:08.598705+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 31,
+        "selected": [
+          {
+            "id": "exp_000014",
+            "val_bpb": 1.90638,
+            "Q": -2.0737999999999923,
+            "E": -0.32929999999999904,
+            "H": 1.3163844238670797,
+            "credit": -1.5802577880664521,
+            "n_v_before": 1,
+            "current_T": 31,
+            "selection_probability": 0.03732142975730069
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T20:49:52.761954+00:00",
+      "result": {
+        "val_bpb": 1.920629,
+        "training_seconds": 305.0,
+        "total_seconds": 823.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 20,
+        "target_steps": 20
+      },
+      "finished_at": "2026-09-17T21:03:38.830307+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000030.log"
+    },
+    {
+      "id": "exp_000031",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000023"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "eb05da9a376c3dc9735385a01c5b2cb88016a175",
+      "hypothesis": "Reducing the Muon matrix learning rate from 0.015 to 0.010 should further reduce late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T21:04:17.051278+00:00",
+      "started_at": "2026-09-17T21:04:17.051288+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 32,
+        "selected": [
+          {
+            "id": "exp_000023",
+            "val_bpb": 1.909673,
+            "Q": -2.4030999999999914,
+            "E": 0.0,
+            "H": 1.8698950669667216,
+            "credit": -1.4681524665166306,
+            "n_v_before": 0,
+            "current_T": 32,
+            "selection_probability": 0.04154079454166586
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T21:04:57.881716+00:00",
+      "result": {
+        "val_bpb": 1.911971,
+        "training_seconds": 322.3,
+        "total_seconds": 740.4,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 24,
+        "target_steps": 24
+      },
+      "finished_at": "2026-09-17T21:17:21.252900+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000031.log"
+    },
+    {
+      "id": "exp_000032",
+      "status": "finished",
+      "mode": "expand",
+      "parents": [
+        "exp_000021"
+      ],
+      "descendants": 0,
+      "best_child_result": null,
+      "commit": "d3ad3ed7a0e1c87b75ba0ed8da3edd0d77c2024b",
+      "hypothesis": "Lowering the Muon matrix learning rate from 0.015 to 0.01 should further reduce residual late-training overshoot and improve validation bits per byte within the fixed 300-second budget.",
+      "worker_slot": 0,
+      "created_at": "2026-09-17T21:17:21.454292+00:00",
+      "started_at": "2026-09-17T21:17:21.454310+00:00",
+      "parent_selection": {
+        "operation": "expand",
+        "current_T": 33,
+        "selected": [
+          {
+            "id": "exp_000021",
+            "val_bpb": 1.909924,
+            "Q": -2.4281999999999915,
+            "E": 0.02069999999998462,
+            "H": 1.3278479816259392,
+            "credit": -1.7539260091870297,
+            "n_v_before": 1,
+            "current_T": 33,
+            "selection_probability": 0.03051806365509725
+          }
+        ]
+      },
+      "parent_selection_committed": true,
+      "training_started_at": "2026-09-17T21:17:59.004595+00:00",
+      "result": {
+        "val_bpb": 1.91242,
+        "training_seconds": 300.7,
+        "total_seconds": 718.5,
+        "peak_vram_mb": 12128.0,
+        "num_steps": 23,
+        "target_steps": 23
+      },
+      "finished_at": "2026-09-17T21:30:00.340621+00:00",
+      "log": "<source-archive>/autoresearch-dag-quality-30/results/exp_000032.log"
+    }
+  ],
+  "rejected_merges": [
+    [
+      "exp_000000",
+      "exp_000001"
+    ],
+    [
+      "exp_000000",
+      "exp_000002"
+    ],
+    [
+      "exp_000000",
+      "exp_000003"
+    ],
+    [
+      "exp_000000",
+      "exp_000004"
+    ],
+    [
+      "exp_000003",
+      "exp_000004"
+    ],
+    [
+      "exp_000002",
+      "exp_000004"
+    ],
+    [
+      "exp_000004",
+      "exp_000005"
+    ],
+    [
+      "exp_000005",
+      "exp_000007"
+    ],
+    [
+      "exp_000006",
+      "exp_000007"
+    ],
+    [
+      "exp_000001",
+      "exp_000005"
+    ],
+    [
+      "exp_000006",
+      "exp_000011"
+    ],
+    [
+      "exp_000004",
+      "exp_000006"
+    ],
+    [
+      "exp_000006",
+      "exp_000012"
+    ],
+    [
+      "exp_000011",
+      "exp_000017"
+    ],
+    [
+      "exp_000005",
+      "exp_000006"
+    ],
+    [
+      "exp_000005",
+      "exp_000012"
+    ],
+    [
+      "exp_000014",
+      "exp_000015"
+    ],
+    [
+      "exp_000005",
+      "exp_000016"
+    ],
+    [
+      "exp_000014",
+      "exp_000016"
+    ],
+    [
+      "exp_000004",
+      "exp_000020"
+    ],
+    [
+      "exp_000011",
+      "exp_000025"
+    ],
+    [
+      "exp_000011",
+      "exp_000015"
+    ],
+    [
+      "exp_000004",
+      "exp_000025"
+    ],
+    [
+      "exp_000005",
+      "exp_000017"
+    ],
+    [
+      "exp_000015",
+      "exp_000022"
+    ],
+    [
+      "exp_000012",
+      "exp_000015"
+    ],
+    [
+      "exp_000009",
+      "exp_000020"
+    ],
+    [
+      "exp_000004",
+      "exp_000014"
+    ],
+    [
+      "exp_000012",
+      "exp_000016"
+    ],
+    [
+      "exp_000009",
+      "exp_000017"
+    ],
+    [
+      "exp_000020",
+      "exp_000029"
+    ]
+  ],
+  "credit_guidance": {
+    "quality_scale": 0.01,
+    "lambda_credit": 0.5,
+    "gamma_explore": 0.5,
+    "temperature": 1.0,
+    "total_parent_selections": 34,
+    "parent_uses": {
+      "exp_000000": 3,
+      "exp_000001": 1,
+      "exp_000002": 1,
+      "exp_000004": 7,
+      "exp_000003": 2,
+      "exp_000012": 2,
+      "exp_000006": 1,
+      "exp_000009": 3,
+      "exp_000016": 2,
+      "exp_000005": 2,
+      "exp_000020": 1,
+      "exp_000014": 2,
+      "exp_000018": 2,
+      "exp_000021": 2,
+      "exp_000024": 2,
+      "exp_000023": 1
+    }
+  }
+}

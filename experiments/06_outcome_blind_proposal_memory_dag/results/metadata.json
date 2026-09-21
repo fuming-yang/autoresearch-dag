@@ -1,0 +1,7 @@
+{
+  "classification": "INCLUDE",
+  "display_name": "Outcome-Blind Proposal-Memory DAG",
+  "source": "checkpoints/autoresearch-credit-guided-dag-d-30 at source commits a8166c2/e64318d/562f5af",
+  "valid_candidates": 30,
+  "figure_candidates_shown": 30
+}
