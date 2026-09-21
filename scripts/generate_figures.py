@@ -91,7 +91,6 @@ def plot_performance(directory: Path, title: str, baseline: float, values: list[
     for filename, ylim, subtitle in (
         ("performance_trajectory_common_scale.png", COMMON_Y, "common scale"),
         ("performance_trajectory_local_scale.png", (local_low - pad, local_high + pad), "local scale"),
-        ("performance_trajectory.png", COMMON_Y, "common scale"),
     ):
         fig, ax = plt.subplots(figsize=FIGSIZE)
         ax.plot(x, values, color=COLORS["candidate"], marker="o", markersize=4.5,

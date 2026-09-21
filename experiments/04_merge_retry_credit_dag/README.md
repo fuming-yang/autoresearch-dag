@@ -14,7 +14,7 @@ Thirty valid candidates completed: 18 Expands and 12 Merges. Nineteen Merge inte
 
 ## Main outputs
 
-`results/dag.json`, `results/candidates.tsv`, `results/summary.json`, and `results/parent_relative_summary.json` contain the compact evidence. `report.md` documents the full audit.
+`results/dag.json`, `results/candidates.tsv`, `results/summary.json`, and `results/parent_relative_summary.json` contain the compact evidence.
 
 ## Key observations
 
@@ -26,4 +26,4 @@ The preceding and current experiments are separate adaptive trajectories, not pa
 
 ## Which files should the reader look at?
 
-Read `figures/performance_trajectory_common_scale.png`, both unified topology figures, `figures/parent_relative_delta.png`, `report.md`, and the JSON summaries in `results/`.
+Read `figures/performance_trajectory_common_scale.png`, both unified topology figures, `figures/parent_relative_delta.png`, and the JSON summaries in `results/`.

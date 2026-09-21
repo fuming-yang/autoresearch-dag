@@ -182,6 +182,8 @@ Outcome-Aware Proposal-Memory DAG addressed the proposal layer. Each accepted pr
 
 The completed run contained 18 canonical mechanism families. Its largest categories were not dominant in the way the preceding warmdown-focused run had been. Ten of 30 candidates improved locally. These results are consistent with the hypothesis that explicit memory and diversity guidance can change proposal behavior, but they are not an isolated causal test: several proposal-layer mechanisms changed together, and only one trajectory was run.
 
+Supplementary views: [productive success lineage](../experiments/05_outcome_aware_proposal_memory_dag/figures/outcome_aware_success_lineage.png) and [mechanism-family distribution](../experiments/05_outcome_aware_proposal_memory_dag/figures/outcome_aware_mechanism_family_distribution.png).
+
 Outcome-Blind Proposal-Memory DAG retained the exploration portion of memory while removing explicit outcome counts. It still recorded 21 mechanism families, with the largest family containing three candidates and nine proposals classified as repeats or refinements. In this run, mechanism breadth did not require exposing explicit success counts to the proposal agent. However, comparing 18 versus 21 families across two single trajectories is descriptive; it does not establish that removing feedback increases diversity.
 
 ## 7. History-Feedback Diagnostic
@@ -193,6 +195,8 @@ The central diagnostic question was:
 The important distinction is between two outcome channels. The orchestrator used measured results to choose parents through credit. The proposal agent could separately be told how past proposal families performed. Outcome-Blind Proposal-Memory DAG removed only the second channel. As a result, later search could still concentrate on successful ancestry even though the proposal prompt did not label past mechanisms as successful or failed.
 
 The run illustrates this separation. Proposal generation covered 21 mechanism families, suggesting that exploration memory continued to support broad mechanism coverage. At the same time, credit-guided allocation concentrated ancestry: 27 of the 28 candidates below the root baseline belonged to the lineage rooted at `exp_000001`. Eight of 20 Expands improved on their parent, but only one of ten Merges improved on its better parent. Most root-baseline wins were inherited rather than newly created.
+
+Supplementary views: [discovery versus inheritance](../experiments/06_outcome_blind_proposal_memory_dag/figures/outcome_blind_discovery_vs_inheritance.png) and [mechanism-family distribution](../experiments/06_outcome_blind_proposal_memory_dag/figures/outcome_blind_mechanism_family_distribution.png).
 
 This diagnostic should not be read as a direct performance contest with Outcome-Aware Proposal-Memory DAG. Their historical baselines were 1.885642 and 1.906318, respectively, and later calibration showed that these thresholds were not exchangeable. The useful evidence is internal: topology, which parents received later work, how often operations improved locally, which proposal mechanisms appeared, and whether root-baseline success was newly discovered or inherited.
 

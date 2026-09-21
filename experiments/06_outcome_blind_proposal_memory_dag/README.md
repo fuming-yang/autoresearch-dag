@@ -14,7 +14,7 @@ Thirty valid candidates completed: 20 Expands and ten Merges. One interrupted pr
 
 ## Main outputs
 
-`results/dag.json`, `results/candidates.tsv`, and `results/summary.json` preserve topology and metrics. The latest vertical and success-aware directed DAG figures are retained, together with parent-relative, diversity, and lineage views.
+`results/dag.json`, `results/candidates.tsv`, and `results/summary.json` preserve topology, metrics, and proposal-history evidence. Unified left-to-right topology and parent-relative views are retained.
 
 ## Key observations
 
@@ -26,4 +26,4 @@ The own-baseline win rate is not clean causal evidence: later calibration showed
 
 ## Which files should the reader look at?
 
-Read `figures/performance_trajectory_common_scale.png`, the unified left-to-right topology figures, `figures/parent_relative_delta.png`, the supplementary vertical DAG figures, `figures/lineage_success.png`, and `code/proposal_memory.py`.
+Read `figures/performance_trajectory_common_scale.png`, the unified left-to-right topology figures, `figures/parent_relative_delta.png`, the supplementary `figures/outcome_blind_discovery_vs_inheritance.png` and `figures/outcome_blind_mechanism_family_distribution.png`, `results/summary.json`, and `code/proposal_memory.py`.

@@ -14,16 +14,16 @@ The run contains 30 valid candidates—20 Expands and ten Merges—plus one fail
 
 ## Main outputs
 
-`results/dag.json`, `results/candidates.tsv`, and `results/summary.json` record candidates and proposal metadata. Diversity and lineage tables/figures are retained in `figures/`; `report.md` gives the source interpretation.
+`results/dag.json`, `results/candidates.tsv`, and `results/summary.json` record candidates and proposal metadata. Compact diversity tables are retained in `figures/`.
 
 ## Key observations
 
-The best candidate was `exp_000027` at 1.855929. Ten of 30 operations improved on their parent or better parent (six Expands, four Merges), and the analysis identified 18 mechanism families. These are descriptive results from one trajectory; they do not prove that proposal memory caused the differences from DAG-B.
+The best candidate was `exp_000027` at 1.855929. Ten of 30 operations improved on their parent or better parent (six Expands, four Merges), and the analysis identified 18 mechanism families. These are descriptive results from one trajectory; they do not prove that proposal memory caused the differences from Merge-Retry Credit-Guided DAG.
 
 ## Limitations
 
-This run cannot isolate which bundled proposal-generation change mattered. Cross-run comparisons are not paired randomized evidence, and baseline provenance complicates comparisons with DAG-D.
+This run cannot isolate which bundled proposal-generation change mattered. Cross-run comparisons are not paired randomized evidence, and baseline provenance complicates comparisons with Outcome-Blind Proposal-Memory DAG.
 
 ## Which files should the reader look at?
 
-Read `figures/performance_trajectory_common_scale.png`, both unified topology figures, `figures/parent_relative_delta.png`, `figures/mechanism_family_distribution.png`, `report.md`, and `code/proposal_memory.py`.
+Read `figures/performance_trajectory_common_scale.png`, both unified topology figures, `figures/parent_relative_delta.png`, the supplementary `figures/outcome_aware_success_lineage.png` and `figures/outcome_aware_mechanism_family_distribution.png`, `figures/proposal_diversity_audit.tsv`, and `code/proposal_memory.py`.

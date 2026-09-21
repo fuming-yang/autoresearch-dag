@@ -14,7 +14,7 @@ The completed run contains 30 valid candidates, plus the 1.885642 baseline. Two 
 
 ## Main outputs
 
-`results/dag.json` preserves all parent relationships and rejected merges; `results/candidates.tsv` gives baseline- and parent-relative outcomes. `figures/fig_dag_directed.png` shows the directed topology.
+`results/dag.json` preserves all parent relationships and rejected merges; `results/candidates.tsv` gives baseline- and parent-relative outcomes. The unified topology figures distinguish operations and local success.
 
 ## Key observations
 

@@ -14,7 +14,7 @@ The run completed 30 valid candidates: 26 Expands and four Merges. Two failed no
 
 ## Main outputs
 
-`results/dag.json`, `results/candidates.tsv`, and `results/merge_attempts.tsv` preserve the compact evidence. `report.md` contains the source audit and interpretation.
+`results/dag.json`, `results/candidates.tsv`, and `results/merge_attempts.tsv` preserve the compact evidence.
 
 ## Key observations
 
@@ -26,4 +26,4 @@ The run does not provide a controlled causal comparison with the earlier random 
 
 ## Which files should the reader look at?
 
-Read `figures/performance_trajectory_common_scale.png`, both unified topology figures, `figures/parent_relative_delta.png`, `report.md`, and `results/merge_attempts.tsv`.
+Read `figures/performance_trajectory_common_scale.png`, both unified topology figures, `figures/parent_relative_delta.png`, `figures/parent_usage_distribution.png`, and `results/merge_attempts.tsv`.
